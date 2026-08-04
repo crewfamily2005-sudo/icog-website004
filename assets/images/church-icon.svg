@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" role="img" aria-label="Israel Church of God icon">
+<rect width="240" height="180" fill="none"/>
+<path d="M46 145h148v8H46z" fill="#d9d4c6"/>
+<path d="M60 82h120v63H60z" fill="#fffdf8" stroke="#0f2045" stroke-width="4"/>
+<path d="M50 84 120 42l70 42" fill="#0f2045"/>
+<path d="M65 79 120 49l55 30" fill="#fffdf8"/>
+<path d="M103 28h34v38h-34z" fill="#fffdf8" stroke="#0f2045" stroke-width="4"/>
+<path d="M98 30 120 12l22 18" fill="#0f2045"/>
+<path d="M120 2v18M111 10h18" stroke="#c59a3b" stroke-width="5" stroke-linecap="round"/>
+<path d="M106 98h28v47h-28z" fill="#0f2045"/>
+<rect x="70" y="103" width="22" height="22" fill="#cfe5f2" stroke="#0f2045" stroke-width="3"/>
+<rect x="148" y="103" width="22" height="22" fill="#cfe5f2" stroke="#0f2045" stroke-width="3"/>
+</svg>

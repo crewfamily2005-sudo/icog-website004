@@ -1,0 +1,77 @@
+
+:root{
+  --navy:#0f2045;--navy2:#07132b;--gold:#c59a3b;--gold2:#e8d7a7;
+  --cream:#f7f3e8;--paper:#fffdf8;--ink:#202632;--muted:#6c7480;--line:#ddd5c3;
+  --max:1180px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+img{max-width:100%;display:block} a{color:inherit}
+.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.6rem 1rem;z-index:999}
+header{position:sticky;top:0;z-index:50;background:var(--navy2);color:#fff;border-bottom:3px solid var(--gold)}
+.header-inner{max-width:var(--max);margin:auto;padding:.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1.25rem}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.brand img{width:58px;height:46px;background:#fff;border-radius:4px;padding:3px}
+.brand strong{font-family:Georgia,serif;font-size:1.05rem;letter-spacing:.03em}
+.brand span{display:block;color:var(--gold2);font-size:.68rem;letter-spacing:.15em;margin-top:.15rem}
+.menu-btn{display:none;background:transparent;border:1px solid rgba(255,255,255,.5);color:white;padding:.5rem .75rem;border-radius:4px}
+nav ul{list-style:none;display:flex;gap:.15rem;margin:0;padding:0}
+nav a{display:block;text-decoration:none;padding:.65rem .72rem;border-radius:3px;font-size:.88rem}
+nav a:hover,nav a[aria-current="page"]{background:rgba(255,255,255,.1);color:var(--gold2)}
+.hero{min-height:620px;display:grid;align-items:center;color:white;background:
+linear-gradient(90deg,rgba(7,19,43,.95),rgba(7,19,43,.78) 42%,rgba(7,19,43,.22) 75%,rgba(7,19,43,.08)),
+url('images/hero.jpg') center/cover no-repeat}
+.hero-inner{max-width:var(--max);width:100%;margin:auto;padding:5rem 1.25rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--gold2);font-size:.77rem;font-weight:bold}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif}
+.hero h1{font-size:clamp(2.8rem,6vw,5.5rem);line-height:1.03;margin:.7rem 0 1rem;max-width:760px;font-weight:normal}
+.hero p{font-family:Georgia,serif;font-size:1.2rem;max-width:680px}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
+.btn{display:inline-block;text-decoration:none;padding:.8rem 1.15rem;border-radius:3px;font-weight:bold}
+.btn-gold{background:var(--gold);color:var(--navy2)} .btn-line{border:1px solid #fff;color:#fff}
+.section{padding:4.6rem 1.25rem}.container{max-width:var(--max);margin:auto}
+.section-head{max-width:760px;margin-bottom:2rem}
+.section-head h2{font-size:clamp(2rem,4vw,3.1rem);margin:.2rem 0;color:var(--navy)}
+.section-head p{color:var(--muted)}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.feature{background:var(--navy);color:white;padding:1.6rem;border-top:4px solid var(--gold)}
+.feature h3{margin:.4rem 0}.feature .mark{font-size:1.8rem;color:var(--gold2)}
+.schedule{background:var(--cream)}
+.schedule-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:white;border:1px solid var(--line);padding:1.5rem}
+.schedule-card{text-align:center}
+.schedule-card strong{font-family:Georgia,serif;color:var(--navy);font-size:1.2rem;display:block}
+.schedule-card .time{font-size:1.35rem;color:var(--gold);font-weight:bold;margin:.35rem 0}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.split img{border:8px solid #fff;box-shadow:0 14px 32px rgba(15,32,69,.16)}
+.page-hero{background:var(--navy);color:#fff;padding:5rem 1.25rem;border-bottom:4px solid var(--gold)}
+.page-hero .container{max-width:950px}.page-hero h1{font-size:clamp(2.6rem,5vw,4.6rem);font-weight:normal;margin:.4rem 0}
+.beliefs{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.belief h3{color:var(--navy);margin-top:0}
+.placeholder{min-height:330px;display:grid;place-items:center;text-align:center;border:2px dashed #b9b09c;background:linear-gradient(135deg,#e9e4d7,#fbf8ef);color:#6f685e;padding:2rem}
+.timeline{border-left:3px solid var(--gold);padding-left:1.5rem}.timeline article{margin-bottom:2rem}.timeline h3{color:var(--navy)}
+.ministers{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.minister{grid-column:span 4;background:white;border:1px solid var(--line);padding:1.25rem;text-align:center}
+.minister.top{grid-column:span 6}
+.avatar{width:110px;height:110px;border-radius:50%;margin:0 auto 1rem;background:var(--cream);border:3px solid var(--gold);display:grid;place-items:center}
+.avatar svg{width:66px;height:66px;color:var(--navy)}
+.minister h3{margin:.3rem 0;color:var(--navy)}.minister p{margin:0;color:var(--gold);font-weight:bold;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2rem}
+.contact-box{background:var(--navy);color:#fff;padding:2rem;border-top:5px solid var(--gold)}
+.contact-box h2{color:#fff;margin-top:0}.contact-list{list-style:none;padding:0;margin:1rem 0}.contact-list li{margin:.85rem 0}
+form{display:grid;gap:1rem}label{font-weight:bold;color:var(--navy)}
+input,textarea{width:100%;padding:.8rem;border:1px solid #bbb;background:#fff;font:inherit}textarea{min-height:145px}
+.notice{font-size:.86rem;color:var(--muted)}
+footer{background:var(--navy2);color:#fff;padding:2.6rem 1.25rem;border-top:4px solid var(--gold)}
+.footer-grid{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+.footer-grid h3{color:var(--gold2)}.copyright{max-width:var(--max);margin:2rem auto 0;padding-top:1rem;border-top:1px solid rgba(255,255,255,.18);font-size:.85rem;color:#cbd2df}
+@media(max-width:900px){
+ .menu-btn{display:block} nav{display:none;width:100%} nav.open{display:block}.header-inner{flex-wrap:wrap}nav ul{flex-direction:column}
+ .feature-grid,.schedule-grid,.beliefs{grid-template-columns:1fr 1fr}.split,.contact-grid{grid-template-columns:1fr}
+ .ministers{grid-template-columns:1fr 1fr}.minister,.minister.top{grid-column:span 1}.footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .feature-grid,.schedule-grid,.beliefs,.ministers{grid-template-columns:1fr}
+ .hero{min-height:570px;background:linear-gradient(rgba(7,19,43,.86),rgba(7,19,43,.8)),url('images/hero.jpg') 52% center/cover no-repeat}
+ .section{padding:3.3rem 1rem}
+}
