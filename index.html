@@ -1,46 +1,838 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home | Israel Church of God</title><meta name="description" content="Welcome to Israel Church of God, Seventh Day Holiness in San Bernardino.">
-<link rel="stylesheet" href="assets/styles.css"><link rel="icon" href="assets/images/church-icon.svg" type="image/svg+xml">
-</head><body><a class="skip" href="#main">Skip to main content</a><header><div class="header-inner">
-<a class="brand" href="index.html" aria-current="page"><img src="assets/images/church-icon.svg" alt=""><div><strong>Israel Church of God</strong><span>SEVENTH DAY HOLINESS · EST. 1957</span></div></a>
-<button class="menu-btn" type="button" aria-expanded="false">Menu</button>
-<nav aria-label="Primary navigation"><ul>
-<li><a href="index.html" aria-current="page">Home</a></li>
-<li><a href="beliefs.html">Our Beliefs</a></li>
-<li><a href="history.html">Our History</a></li>
-<li><a href="ministers.html">Our Ministers</a></li>
-<li><a href="visit.html">Visit Us</a></li>
-</ul></nav>
-</div></header>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Home | Israel Church of God</title>
+
+<meta
+  name="description"
+  content="Welcome to Israel Church of God, Seventh Day Holiness, in San Bernardino, California."
+>
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<link
+  rel="icon"
+  href="assets/images/church-icon.svg"
+  type="image/svg+xml"
+>
+
+<style>
+
+  /* Refined header emblem */
+
+  .brand-emblem {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    place-items: center;
+    overflow: hidden;
+    border: 2px solid #c59a3b;
+    border-radius: 50%;
+    background: #0f2045;
+    box-shadow:
+      0 0 0 3px rgba(197, 154, 59, 0.18),
+      0 4px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  .brand-emblem svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand strong {
+    font-size: 1.08rem;
+  }
+
+  .hero-statement {
+    max-width: 670px;
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+
+  /* Our Foundation */
+
+  .foundation-header {
+    max-width: 930px;
+    margin-bottom: 2.6rem;
+  }
+
+  .foundation-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    color: #9a7424;
+    font-size: 0.92rem;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .foundation-label::before {
+    content: "";
+    width: 42px;
+    height: 3px;
+    background: #c59a3b;
+  }
+
+  .foundation-statement {
+    max-width: 980px;
+    margin: 0;
+    color: #0f2045;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 3.2vw, 2.7rem);
+    line-height: 1.35;
+  }
+
+  .foundation-statement strong {
+    color: #9a7424;
+    font-weight: normal;
+  }
+
+  /* Foundation cards */
+
+  .feature-grid {
+    align-items: stretch;
+  }
+
+  .feature {
+    position: relative;
+    min-height: 250px;
+    padding: 1.8rem;
+    overflow: hidden;
+  }
+
+  .feature::after {
+    content: "";
+    position: absolute;
+    right: -24px;
+    bottom: -24px;
+    width: 105px;
+    height: 105px;
+    border: 1px solid rgba(232, 215, 167, 0.2);
+    border-radius: 50%;
+  }
+
+  .feature h3,
+  .feature p,
+  .feature .mark {
+    position: relative;
+    z-index: 1;
+  }
+
+  .feature h3 {
+    font-size: 1.35rem;
+  }
+
+  .feature p {
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+  /* Worship schedule */
+
+  .schedule-card {
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid #c59a3b;
+  }
+
+  .schedule-card strong {
+    font-size: 1.35rem;
+  }
+
+  .prayer-times {
+    margin: 1.1rem 0 0;
+    overflow: hidden;
+    border: 1px solid #ddd5c3;
+    border-radius: 4px;
+    background: #fffdf8;
+  }
+
+  .prayer-time-row {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    align-items: center;
+    text-align: left;
+  }
+
+  .prayer-time-row + .prayer-time-row {
+    border-top: 1px solid #ddd5c3;
+  }
+
+  .prayer-time {
+    padding: 0.8rem;
+    background: #0f2045;
+    color: #e8d7a7;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .prayer-season {
+    padding: 0.8rem 0.9rem;
+    color: #0f2045;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  /* Visit section */
+
+  .visit-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.75rem;
+    color: #9a7424;
+    font-size: 0.94rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .visit-label::before {
+    content: "";
+    width: 38px;
+    height: 3px;
+    background: #c59a3b;
+  }
+
+  .visit-heading {
+    margin: 0 0 0.65rem;
+    color: #0f2045;
+    font-size: clamp(2.3rem, 4vw, 3.6rem);
+    line-height: 1.12;
+  }
+
+  .visit-subheading {
+    margin: 0 0 1rem;
+    color: #9a7424;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+  }
+
+  .pastor-welcome {
+    margin-top: 1.5rem;
+    padding: 1.35rem 1.5rem;
+    background: #f7f3e8;
+    border-left: 5px solid #c59a3b;
+  }
+
+  .pastor-welcome strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #0f2045;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 560px) {
+
+    .brand-emblem {
+      width: 50px;
+      height: 50px;
+      flex-basis: 50px;
+    }
+
+    .brand-emblem svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .feature {
+      min-height: auto;
+    }
+
+  }
+
+</style>
+</head>
+
+<body>
+
+<a class="skip" href="#main">
+Skip to main content
+</a>
+
+<header>
+
+<div class="header-inner">
+
+<a class="brand" href="index.html">
+
+<div
+  class="brand-emblem"
+  role="img"
+  aria-label="Israel Church of God church emblem"
+>
+
+<svg
+  viewBox="0 0 100 100"
+  aria-hidden="true"
+>
+
+<!-- Gold rays -->
+
+<g
+  stroke="#c59a3b"
+  stroke-width="2"
+  stroke-linecap="round"
+  opacity="0.75"
+>
+
+<path d="M50 5v11"/>
+<path d="M28 11l6 10"/>
+<path d="M72 11l-6 10"/>
+<path d="M12 29l11 5"/>
+<path d="M88 29l-11 5"/>
+
+</g>
+
+<!-- Cross -->
+
+<path
+  d="M50 7v18M43 14h14"
+  stroke="#c59a3b"
+  stroke-width="5"
+  stroke-linecap="round"
+/>
+
+<!-- Church roof -->
+
+<path
+  d="M20 53L50 29l30 24"
+  fill="#c59a3b"
+/>
+
+<path
+  d="M27 52L50 35l23 17"
+  fill="#ffffff"
+/>
+
+<!-- Church body -->
+
+<rect
+  x="27"
+  y="50"
+  width="46"
+  height="35"
+  rx="1"
+  fill="#ffffff"
+/>
+
+<!-- Steeple -->
+
+<rect
+  x="42"
+  y="27"
+  width="16"
+  height="23"
+  fill="#ffffff"
+/>
+
+<path
+  d="M39 29L50 19l11 10"
+  fill="#c59a3b"
+/>
+
+<!-- Door -->
+
+<path
+  d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
+  fill="#0f2045"
+/>
+
+<!-- Windows -->
+
+<rect
+  x="32"
+  y="61"
+  width="7"
+  height="11"
+  rx="3"
+  fill="#0f2045"
+/>
+
+<rect
+  x="61"
+  y="61"
+  width="7"
+  height="11"
+  rx="3"
+  fill="#0f2045"
+/>
+
+<!-- Ground -->
+
+<path
+  d="M15 87c22-7 48-7 70 0"
+  fill="none"
+  stroke="#c59a3b"
+  stroke-width="3"
+  stroke-linecap="round"
+/>
+
+</svg>
+
+</div>
+
+<div>
+
+<strong>
+Israel Church of God
+</strong>
+
+<span>
+SEVENTH DAY HOLINESS · EST. 1957
+</span>
+
+</div>
+
+</a>
+
+<button
+  class="menu-btn"
+  type="button"
+  aria-expanded="false"
+>
+Menu
+</button>
+
+<nav aria-label="Primary navigation">
+
+<ul>
+
+<li>
+<a
+  href="index.html"
+  aria-current="page"
+>
+Home
+</a>
+</li>
+
+<li>
+<a href="beliefs.html">
+Our Beliefs
+</a>
+</li>
+
+<li>
+<a href="history.html">
+Our History
+</a>
+</li>
+
+<li>
+<a href="ministers.html">
+Our Ministers
+</a>
+</li>
+
+<li>
+<a href="visit.html">
+Visit Us
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
 <main id="main">
-<section class="hero"><div class="hero-inner"><div class="eyebrow">Israel Church of God · Seventh Day Holiness</div>
-<h1>A House of Prayer for All People</h1>
-<p>Rooted in Scripture, committed to holiness, and gathered in reverence to worship God and keep His commandments.</p>
-<div class="actions"><a class="btn btn-gold" href="visit.html">Plan Your Visit</a><a class="btn btn-line" href="beliefs.html">Explore Our Beliefs</a></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div class="eyebrow" style="color:#9a7424">Our Foundation</div>
-<h2>Faithful worship. Biblical truth. Holy living.</h2><p>Israel Church of God, Seventh Day Holiness has served San Bernardino since 1957. We welcome those seeking sincere worship, prayer, Scripture, and fellowship.</p></div>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="eyebrow">
+Israel Church of God · Seventh Day Holiness
+</div>
+
+<h1>
+A House of Prayer for All People
+</h1>
+
+<p class="hero-statement">
+Committed to holiness and gathered in reverence to worship God
+and keep His commandments.
+</p>
+
+<div class="actions">
+
+<a
+  class="btn btn-gold"
+  href="visit.html"
+>
+Plan Your Visit
+</a>
+
+<a
+  class="btn btn-line"
+  href="beliefs.html"
+>
+Explore Our Beliefs
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Foundation -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="foundation-header">
+
+<div class="foundation-label">
+Our Foundation
+</div>
+
+<p class="foundation-statement">
+Israel Church of God, Seventh Day Holiness has served
+San Bernardino since 1957.
+<strong>
+We welcome those seeking sincere worship, prayer, Scripture,
+and fellowship.
+</strong>
+</p>
+
+</div>
+
 <div class="feature-grid">
-<article class="feature"><div class="mark">✦</div><h3>Biblical Truth</h3><p>We look to the Holy Scriptures as our foundation for doctrine, worship, and daily living.</p></article>
-<article class="feature"><div class="mark">☼</div><h3>Seventh-Day Sabbath</h3><p>We gather on Saturday for Sabbath School and General Service.</p></article>
-<article class="feature"><div class="mark">♢</div><h3>Prayer</h3><p>Friday night prayer provides time for reverence, intercession, and spiritual renewal.</p></article>
-<article class="feature"><div class="mark">⌂</div><h3>Open Fellowship</h3><p>Visitors are welcome to join us as we worship God in spirit, truth, humility, and love.</p></article>
-</div></div></section>
-<section class="section schedule"><div class="container"><div class="section-head"><h2>Come Worship With Us</h2><p>We invite you to join our regular weekly services.</p></div>
+
+<article class="feature">
+
+<div class="mark" aria-hidden="true">
+✦
+</div>
+
+<h3>
+Biblical Truth
+</h3>
+
+<p>
+We look to the Holy Spirit as our foundation for doctrine,
+worship, and daily living.
+</p>
+
+</article>
+
+<article class="feature">
+
+<div class="mark" aria-hidden="true">
+☼
+</div>
+
+<h3>
+Seventh-Day Sabbath
+</h3>
+
+<p>
+We gather on Saturday for Sabbath School and General Service.
+</p>
+
+</article>
+
+<article class="feature">
+
+<div class="mark" aria-hidden="true">
+♢
+</div>
+
+<h3>
+Prayer
+</h3>
+
+<p>
+Friday night prayer allows prayer for the health of the
+ministry, that all ministers will know their calling and abide
+in it, and that ministers will be one everywhere.
+</p>
+
+</article>
+
+<article class="feature">
+
+<div class="mark" aria-hidden="true">
+⌂
+</div>
+
+<h3>
+Open Fellowship
+</h3>
+
+<p>
+Visitors are welcome to join us as we worship God in spirit and
+in truth.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Worship schedule -->
+
+<section class="section schedule">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+Come Worship With Us
+</h2>
+
+<p>
+We invite you to join our regular weekly services.
+</p>
+
+</div>
+
 <div class="schedule-grid">
-<article class="card schedule-card"><strong>Friday Night Prayer</strong><div class="time">7 p.m.</div><p>Daylight Saving Time<br><b>6 p.m.</b> Standard Time</p></article>
-<article class="card schedule-card"><strong>Sabbath School</strong><div class="time">Saturday · 10 a.m.</div><p>Bible-centered study and instruction.</p></article>
-<article class="card schedule-card"><strong>General Service</strong><div class="time">Saturday · 12 p.m.</div><p>Worship, preaching, prayer, and fellowship.</p></article>
-</div></div></section>
-<section class="section"><div class="container split"><div><div class="eyebrow" style="color:#9a7424">Visit Israel Church of God</div>
-<h2 style="font-size:2.5rem;color:#0f2045">A local church with a lasting foundation</h2>
-<p>Located on North Mount Vernon in San Bernardino, our church continues a tradition of Sabbath worship, holiness, prayer, and service.</p>
-<div class="card"><strong>Pastor Kenneth O. Olive</strong><br>We look forward to welcoming you and your family.</div></div>
-<img src="assets/images/church-front.jpg" alt="Front view of Israel Church of God in San Bernardino"></div></section>
+
+<article class="card schedule-card">
+
+<strong>
+Friday Night Prayer
+</strong>
+
+<div class="prayer-times">
+
+<div class="prayer-time-row">
+
+<div class="prayer-time">
+7 p.m.
+</div>
+
+<div class="prayer-season">
+Daylight Saving Time
+</div>
+
+</div>
+
+<div class="prayer-time-row">
+
+<div class="prayer-time">
+6 p.m.
+</div>
+
+<div class="prayer-season">
+Standard Time
+</div>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="card schedule-card">
+
+<strong>
+Sabbath School
+</strong>
+
+<div class="time">
+Saturday · 10 a.m.
+</div>
+
+<p>
+Bible-centered study and instruction.
+</p>
+
+</article>
+
+<article class="card schedule-card">
+
+<strong>
+General Service
+</strong>
+
+<div class="time">
+Saturday · 12 p.m.
+</div>
+
+<p>
+Worship, preaching, prayer, and fellowship.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Visit section -->
+
+<section class="section">
+
+<div class="container split">
+
+<div>
+
+<div class="visit-label">
+Visit Israel Church of God
+</div>
+
+<h2 class="visit-heading">
+Come Worship With Us
+</h2>
+
+<p class="visit-subheading">
+A local church with a lasting spiritual foundation
+</p>
+
+<p>
+Located on North Mount Vernon in San Bernardino, our church
+continues a tradition of Sabbath worship, holiness, prayer, and
+service.
+</p>
+
+<div class="pastor-welcome">
+
+<strong>
+Pastor Kenneth O. Olive
+</strong>
+
+We look forward to welcoming you and your family.
+
+</div>
+
+<div style="margin-top: 1.4rem;">
+
+<a
+  class="btn btn-gold"
+  href="visit.html"
+>
+View Our Location
+</a>
+
+</div>
+
+</div>
+
+<img
+  src="assets/images/church-front.jpg"
+  alt="Front view of Israel Church of God in San Bernardino"
+>
+
+</div>
+
+</section>
+
 </main>
-<footer><div class="footer-grid">
-<div><h3>Israel Church of God</h3><p>Seventh Day Holiness<br>Established 1957</p><p>“Fear God, and keep his commandments: for this is the whole duty of man.” — Ecclesiastes 12:13</p></div>
-<div><h3>Contact</h3><p>1650 North Mount Vernon<br>San Bernardino, CA 92411</p><p><a href="tel:+19094730026">(909) 473-0026</a><br><a href="mailto:icog7@outlook.com">icog7@outlook.com</a></p></div>
-<div><h3>Services</h3><p>Friday Night Prayer<br>7 p.m. Daylight Saving Time<br>6 p.m. Standard Time</p><p>Saturday Sabbath School · 10 a.m.<br>Saturday General Service · 12 p.m.</p></div>
-</div><div class="copyright">© <span data-year></span> Israel Church of God, Seventh Day Holiness.</div></footer>
-<script src="assets/script.js"></script></body></html>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>
+Israel Church of God
+</h3>
+
+<p>
+Seventh Day Holiness<br>
+Established 1957
+</p>
+
+<p>
+“Fear God, and keep his commandments: for this is the whole
+duty of man.” — Ecclesiastes 12:13
+</p>
+
+</div>
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+1650 North Mount Vernon<br>
+San Bernardino, CA 92411
+</p>
+
+<p>
+
+<a href="tel:+19094730026">
+(909) 473-0026
+</a>
+
+<br>
+
+<a href="mailto:icog7@outlook.com">
+icog7@outlook.com
+</a>
+
+<br>
+
+<a
+  href="https://icog7dayholiness.com"
+  target="_blank"
+  rel="noopener"
+>
+icog7dayholiness.com
+</a>
+
+</p>
+
+</div>
+
+<div>
+
+<h3>
+Services
+</h3>
+
+<p>
+Friday Night Prayer<br>
+7 p.m. Daylight Saving Time<br>
+6 p.m. Standard Time
+</p>
+
+<p>
+Saturday Sabbath School · 10 a.m.<br>
+Saturday General Service · 12 p.m.
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© <span data-year></span>
+Israel Church of God, Seventh Day Holiness.
+
+</div>
+
+</footer>
+
+<script src="assets/script.js"></script>
+
+</body>
+</html>
