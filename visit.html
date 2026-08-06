@@ -1,39 +1,634 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Visit Us | Israel Church of God</title><meta name="description" content="Service times and contact information for Israel Church of God.">
-<link rel="stylesheet" href="assets/styles.css"><link rel="icon" href="assets/images/church-icon.svg" type="image/svg+xml">
-</head><body><a class="skip" href="#main">Skip to main content</a><header><div class="header-inner">
-<a class="brand" href="index.html"><img src="assets/images/church-icon.svg" alt=""><div><strong>Israel Church of God</strong><span>SEVENTH DAY HOLINESS · EST. 1957</span></div></a>
-<button class="menu-btn" type="button" aria-expanded="false">Menu</button>
-<nav aria-label="Primary navigation"><ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="beliefs.html">Our Beliefs</a></li>
-<li><a href="history.html">Our History</a></li>
-<li><a href="ministers.html">Our Ministers</a></li>
-<li><a href="visit.html" aria-current="page">Visit Us</a></li>
-</ul></nav>
-</div></header>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Visit Us | Israel Church of God</title>
+
+<meta
+  name="description"
+  content="Visit Israel Church of God, Seventh Day Holiness, at 1650 North Mount Vernon in San Bernardino, California."
+>
+
+<link rel="stylesheet" href="assets/styles.css">
+
+<link
+  rel="icon"
+  href="assets/images/church-icon.svg"
+  type="image/svg+xml"
+>
+
+<style>
+
+  .visit-intro {
+    max-width: 820px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+
+  .visit-intro h2 {
+    margin-bottom: 0.75rem;
+    color: #0f2045;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .visit-intro p {
+    color: #6c7480;
+    font-size: 1.06rem;
+  }
+
+  .visit-layout {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .church-information {
+    padding: 2rem;
+    background: #0f2045;
+    border-top: 5px solid #c59a3b;
+    color: white;
+  }
+
+  .church-information h2,
+  .church-information h3 {
+    color: white;
+  }
+
+  .church-information h2 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+  .contact-details {
+    margin: 1.5rem 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact-details li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 0.8rem;
+    align-items: start;
+    margin-bottom: 1.35rem;
+  }
+
+  .contact-icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 50%;
+    background: #c59a3b;
+    color: #0f2045;
+    font-weight: bold;
+  }
+
+  .contact-details strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: #e8d7a7;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .contact-details a {
+    color: white;
+    text-decoration-color: #c59a3b;
+    text-underline-offset: 3px;
+  }
+
+  .service-list {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .service-item {
+    margin-bottom: 1.15rem;
+  }
+
+  .service-item strong {
+    display: block;
+    color: #e8d7a7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+  }
+
+  .map-panel {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #ddd5c3;
+    border-top: 5px solid #c59a3b;
+    box-shadow: 0 14px 32px rgba(15, 32, 69, 0.12);
+  }
+
+  .map-heading {
+    padding: 1.4rem 1.5rem;
+    background: #fffdf8;
+  }
+
+  .map-heading h2 {
+    margin: 0 0 0.35rem;
+    color: #0f2045;
+    font-size: 1.8rem;
+  }
+
+  .map-heading p {
+    margin: 0;
+    color: #6c7480;
+  }
+
+  .google-map {
+    position: relative;
+    min-height: 480px;
+    background: #f2eee4;
+  }
+
+  .google-map iframe {
+    display: block;
+    width: 100%;
+    height: 480px;
+    border: 0;
+  }
+
+  .map-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 1.25rem 1.5rem 1.5rem;
+    background: white;
+  }
+
+  .directions-button {
+    display: inline-block;
+    padding: 0.8rem 1.1rem;
+    border-radius: 3px;
+    background: #c59a3b;
+    color: #07132b;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .directions-button:hover {
+    background: #d8ad50;
+  }
+
+  .address-button {
+    display: inline-block;
+    padding: 0.8rem 1.1rem;
+    border: 1px solid #0f2045;
+    border-radius: 3px;
+    color: #0f2045;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .welcome-section {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: #f7f3e8;
+    border-left: 6px solid #c59a3b;
+    text-align: center;
+  }
+
+  .welcome-section h2 {
+    margin: 0 0 0.75rem;
+    color: #0f2045;
+    font-size: 2rem;
+  }
+
+  .welcome-section p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #5f6672;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08rem;
+  }
+
+  @media (max-width: 900px) {
+
+    .visit-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .google-map,
+    .google-map iframe {
+      min-height: 420px;
+      height: 420px;
+    }
+
+  }
+
+  @media (max-width: 560px) {
+
+    .church-information,
+    .welcome-section {
+      padding: 1.5rem;
+    }
+
+    .google-map,
+    .google-map iframe {
+      min-height: 350px;
+      height: 350px;
+    }
+
+    .map-actions {
+      flex-direction: column;
+    }
+
+    .directions-button,
+    .address-button {
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+</style>
+</head>
+
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header>
+<div class="header-inner">
+
+<a class="brand" href="index.html">
+
+<img
+  src="assets/images/church-icon.svg"
+  alt=""
+>
+
+<div>
+
+<strong>Israel Church of God</strong>
+
+<span>
+SEVENTH DAY HOLINESS · EST. 1957
+</span>
+
+</div>
+
+</a>
+
+<button
+  class="menu-btn"
+  type="button"
+  aria-expanded="false"
+>
+Menu
+</button>
+
+<nav aria-label="Primary navigation">
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+<li>
+<a href="beliefs.html">Our Beliefs</a>
+</li>
+
+<li>
+<a href="history.html">Our History</a>
+</li>
+
+<li>
+<a href="ministers.html">Our Ministers</a>
+</li>
+
+<li>
+<a
+  href="visit.html"
+  aria-current="page"
+>
+Visit Us
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+</header>
+
 <main id="main">
-<section class="page-hero"><div class="container"><div class="eyebrow">You Are Welcome</div><h1>Visit Us</h1><p>Join us for Sabbath worship, Bible study, prayer, and fellowship in San Bernardino.</p></div></section>
-<section class="section"><div class="container contact-grid">
-<div class="contact-box"><h2>Church Information</h2><ul class="contact-list">
-<li><strong>Address</strong><br>1650 North Mount Vernon<br>San Bernardino, CA 92411</li>
-<li><strong>Telephone</strong><br><a href="tel:+19094730026">(909) 473-0026</a></li>
-<li><strong>Email</strong><br><a href="mailto:icog7@outlook.com">icog7@outlook.com</a></li>
-<li><strong>Website</strong><br>icog7dailyholiness.com</li></ul>
-<h3>Worship Schedule</h3><p><strong>Friday Night Prayer</strong><br>7 p.m. Daylight Saving Time<br>6 p.m. Standard Time</p>
-<p><strong>Sabbath School</strong><br>Saturday at 10 a.m.</p><p><strong>General Service</strong><br>Saturday at 12 p.m.</p></div>
-<div><img src="assets/images/church-side.jpg" alt="Israel Church of God building and parking lot">
-<h2 style="color:#0f2045">Send a Message</h2><form action="mailto:icog7@outlook.com" method="post" enctype="text/plain">
-<div><label for="name">Name</label><input id="name" name="name" required></div>
-<div><label for="email">Email</label><input id="email" type="email" name="email" required></div>
-<div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
-<button class="btn btn-gold" type="submit">Prepare Email</button><p class="notice">This opens the visitor’s email program.</p></form></div>
-</div></section>
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="eyebrow">
+You Are Welcome
+</div>
+
+<h1>Visit Us</h1>
+
+<p>
+Join us for Sabbath worship, Bible study, prayer, and fellowship
+in San Bernardino.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="visit-intro">
+
+<h2>Come Worship With Us</h2>
+
+<p>
+Whether you are visiting for the first time or returning to
+worship with us, we look forward to welcoming you to Israel
+Church of God, Seventh Day Holiness.
+</p>
+
+</div>
+
+<div class="visit-layout">
+
+<section class="church-information">
+
+<h2>Church Information</h2>
+
+<ul class="contact-details">
+
+<li>
+
+<div class="contact-icon" aria-hidden="true">
+⌖
+</div>
+
+<div>
+
+<strong>Address</strong>
+
+1650 North Mount Vernon<br>
+San Bernardino, California 92411
+
+</div>
+
+</li>
+
+<li>
+
+<div class="contact-icon" aria-hidden="true">
+☎
+</div>
+
+<div>
+
+<strong>Telephone</strong>
+
+<a href="tel:+19094730026">
+(909) 473-0026
+</a>
+
+</div>
+
+</li>
+
+<li>
+
+<div class="contact-icon" aria-hidden="true">
+✉
+</div>
+
+<div>
+
+<strong>Email</strong>
+
+<a href="mailto:icog7@outlook.com">
+icog7@outlook.com
+</a>
+
+</div>
+
+</li>
+
+<li>
+
+<div class="contact-icon" aria-hidden="true">
+◎
+</div>
+
+<div>
+
+<strong>Website</strong>
+
+<a
+  href="https://icog7dayholiness.com"
+  target="_blank"
+  rel="noopener"
+>
+icog7dayholiness.com
+</a>
+
+</div>
+
+</li>
+
+</ul>
+
+<div class="service-list">
+
+<h3>Worship Schedule</h3>
+
+<div class="service-item">
+
+<strong>Friday Night Prayer</strong>
+
+7 p.m. Daylight Saving Time<br>
+6 p.m. Standard Time
+
+</div>
+
+<div class="service-item">
+
+<strong>Sabbath School</strong>
+
+Saturday at 10 a.m.
+
+</div>
+
+<div class="service-item">
+
+<strong>General Service</strong>
+
+Saturday at 12 p.m.
+
+</div>
+
+</div>
+
+</section>
+
+<section class="map-panel">
+
+<div class="map-heading">
+
+<h2>Find Our Church</h2>
+
+<p>
+Use the map below to view our location and plan your route.
+</p>
+
+</div>
+
+<div class="google-map">
+
+<iframe
+  src="https://www.google.com/maps?q=1650+North+Mount+Vernon+San+Bernardino+CA+92411&output=embed"
+  title="Google Map showing Israel Church of God at 1650 North Mount Vernon in San Bernardino"
+  loading="lazy"
+  allowfullscreen
+  referrerpolicy="no-referrer-when-downgrade"
+>
+</iframe>
+
+</div>
+
+<div class="map-actions">
+
+<a
+  class="directions-button"
+  href="https://www.google.com/maps/dir/?api=1&destination=1650+North+Mount+Vernon+San+Bernardino+CA+92411"
+  target="_blank"
+  rel="noopener"
+>
+Get Directions
+</a>
+
+<a
+  class="address-button"
+  href="https://www.google.com/maps/search/?api=1&query=1650+North+Mount+Vernon+San+Bernardino+CA+92411"
+  target="_blank"
+  rel="noopener"
+>
+View Larger Map
+</a>
+
+</div>
+
+</section>
+
+</div>
+
+<div class="welcome-section">
+
+<h2>We Look Forward to Welcoming You</h2>
+
+<p>
+We invite you to worship with us as we gather for prayer,
+Sabbath study, preaching, fellowship, and service to God.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
-<footer><div class="footer-grid">
-<div><h3>Israel Church of God</h3><p>Seventh Day Holiness<br>Established 1957</p><p>“Fear God, and keep his commandments: for this is the whole duty of man.” — Ecclesiastes 12:13</p></div>
-<div><h3>Contact</h3><p>1650 North Mount Vernon<br>San Bernardino, CA 92411</p><p><a href="tel:+19094730026">(909) 473-0026</a><br><a href="mailto:icog7@outlook.com">icog7@outlook.com</a></p></div>
-<div><h3>Services</h3><p>Friday Night Prayer<br>7 p.m. Daylight Saving Time<br>6 p.m. Standard Time</p><p>Saturday Sabbath School · 10 a.m.<br>Saturday General Service · 12 p.m.</p></div>
-</div><div class="copyright">© <span data-year></span> Israel Church of God, Seventh Day Holiness.</div></footer>
-<script src="assets/script.js"></script></body></html>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Israel Church of God</h3>
+
+<p>
+Seventh Day Holiness<br>
+Established 1957
+</p>
+
+<p>
+“Fear God, and keep his commandments: for this is the whole
+duty of man.” — Ecclesiastes 12:13
+</p>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>
+1650 North Mount Vernon<br>
+San Bernardino, CA 92411
+</p>
+
+<p>
+
+<a href="tel:+19094730026">
+(909) 473-0026
+</a>
+
+<br>
+
+<a href="mailto:icog7@outlook.com">
+icog7@outlook.com
+</a>
+
+<br>
+
+<a
+  href="https://icog7dayholiness.com"
+  target="_blank"
+  rel="noopener"
+>
+icog7dayholiness.com
+</a>
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Services</h3>
+
+<p>
+Friday Night Prayer<br>
+7 p.m. Daylight Saving Time<br>
+6 p.m. Standard Time
+</p>
+
+<p>
+Saturday Sabbath School · 10 a.m.<br>
+Saturday General Service · 12 p.m.
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© <span data-year></span>
+Israel Church of God, Seventh Day Holiness.
+
+</div>
+
+</footer>
+
+<script src="assets/script.js"></script>
+
+</body>
+</html>
