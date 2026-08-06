@@ -18,6 +18,422 @@
   href="assets/images/church-icon.svg"
   type="image/svg+xml"
 >
+
+<style>
+
+  .beliefs-introduction {
+    max-width: 880px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+  }
+
+  .beliefs-introduction h2 {
+    margin: 0 0 1rem;
+    color: #0f2045;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+
+  .beliefs-introduction p {
+    margin: 0;
+    color: #6c7480;
+    font-size: 1.08rem;
+  }
+
+  .beliefs-foundation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 4rem;
+    overflow: hidden;
+    border: 1px solid #ddd5c3;
+    border-top: 5px solid #c59a3b;
+    background: #ffffff;
+    box-shadow: 0 14px 32px rgba(15, 32, 69, 0.1);
+  }
+
+  .foundation-item {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .foundation-item + .foundation-item {
+    border-left: 1px solid #ddd5c3;
+  }
+
+  .foundation-number {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 1rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #0f2045;
+    color: #e8d7a7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.1rem;
+  }
+
+  .foundation-item h3 {
+    margin: 0.25rem 0 0.6rem;
+    color: #0f2045;
+    font-size: 1.35rem;
+  }
+
+  .foundation-item p {
+    margin: 0;
+    color: #6c7480;
+  }
+
+  .belief-section {
+    margin-bottom: 4.5rem;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #c59a3b;
+  }
+
+  .section-label span {
+    color: #9a7424;
+    font-size: 0.76rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .gospel-feature {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    overflow: hidden;
+    background: #0f2045;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 16px 38px rgba(15, 32, 69, 0.18);
+  }
+
+  .gospel-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(197, 154, 59, 0.18),
+        rgba(15, 32, 69, 0)
+      );
+  }
+
+  .gospel-heading .small-title {
+    margin-bottom: 0.75rem;
+    color: #e8d7a7;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .gospel-heading h2 {
+    margin: 0;
+    color: white;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  .gospel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    background: #fffdf8;
+    color: #202632;
+    border-left: 5px solid #c59a3b;
+  }
+
+  .gospel-content blockquote {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    line-height: 1.55;
+    color: #0f2045;
+  }
+
+  .gospel-content p {
+    margin: 1.25rem 0 0;
+    color: #6c7480;
+  }
+
+  .ministry-obedience {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1.5rem;
+  }
+
+  .feature-belief {
+    position: relative;
+    padding: 2.25rem;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #ddd5c3;
+    border-top: 5px solid #c59a3b;
+    box-shadow: 0 12px 28px rgba(15, 32, 69, 0.09);
+  }
+
+  .feature-belief::after {
+    content: "5";
+    position: absolute;
+    right: 1.25rem;
+    bottom: -1.5rem;
+    color: rgba(15, 32, 69, 0.055);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10rem;
+    line-height: 1;
+  }
+
+  .feature-belief h3 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 1rem;
+    color: #0f2045;
+    font-size: 1.8rem;
+  }
+
+  .feature-belief p {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+  }
+
+  .scripture-reference {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #9a7424;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+
+  .obedience-stack {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .obedience-item {
+    padding: 1.65rem;
+    background: #f7f3e8;
+    border-left: 5px solid #c59a3b;
+  }
+
+  .obedience-item h3 {
+    margin: 0 0 0.65rem;
+    color: #0f2045;
+    font-size: 1.4rem;
+  }
+
+  .obedience-item p {
+    margin: 0;
+  }
+
+  .sabbath-section {
+    display: grid;
+    grid-template-columns: 0.38fr 0.62fr;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 16px 38px rgba(15, 32, 69, 0.16);
+  }
+
+  .sabbath-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2.5rem;
+    background: #0f2045;
+    color: white;
+  }
+
+  .sabbath-heading .number {
+    margin-bottom: 1.5rem;
+    color: #c59a3b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .sabbath-heading h2 {
+    margin: 0;
+    color: white;
+    font-size: 2.35rem;
+    line-height: 1.12;
+  }
+
+  .sabbath-heading p {
+    margin: 1rem 0 0;
+    color: #e8d7a7;
+  }
+
+  .sabbath-text {
+    padding: 3rem;
+    background: #fffdf8;
+    border: 1px solid #ddd5c3;
+    border-left: 0;
+  }
+
+  .sabbath-text blockquote {
+    margin: 0;
+    color: #202632;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08rem;
+    line-height: 1.85;
+  }
+
+  .sabbath-reference {
+    margin-top: 1.25rem;
+    color: #9a7424;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  .faith-path {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .faith-item {
+    position: relative;
+    min-height: 210px;
+    padding: 2rem 2rem 2rem 5.25rem;
+    background: #ffffff;
+    border: 1px solid #ddd5c3;
+    box-shadow: 0 10px 24px rgba(15, 32, 69, 0.08);
+  }
+
+  .faith-number {
+    position: absolute;
+    top: 1.65rem;
+    left: 1.5rem;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 50%;
+    background: #0f2045;
+    color: #e8d7a7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+  }
+
+  .faith-item h3 {
+    margin: 0 0 0.7rem;
+    color: #0f2045;
+    font-size: 1.45rem;
+  }
+
+  .faith-item p {
+    margin: 0.35rem 0;
+  }
+
+  .faith-item.featured-final {
+    background: #0f2045;
+    color: white;
+    border-color: #0f2045;
+  }
+
+  .faith-item.featured-final h3 {
+    color: white;
+  }
+
+  .faith-item.featured-final .faith-number {
+    background: #c59a3b;
+    color: #0f2045;
+  }
+
+  .faith-item.featured-final .scripture-reference {
+    color: #e8d7a7;
+  }
+
+  .belief-conclusion {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+    background: #f7f3e8;
+    border-top: 5px solid #c59a3b;
+  }
+
+  .belief-conclusion h2 {
+    margin: 0 0 0.75rem;
+    color: #0f2045;
+    font-size: 2rem;
+  }
+
+  .belief-conclusion p {
+    margin: 0;
+    color: #5f6672;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+  }
+
+  @media (max-width: 900px) {
+
+    .beliefs-foundation,
+    .gospel-feature,
+    .ministry-obedience,
+    .sabbath-section {
+      grid-template-columns: 1fr;
+    }
+
+    .foundation-item + .foundation-item {
+      border-left: 0;
+      border-top: 1px solid #ddd5c3;
+    }
+
+    .gospel-content {
+      border-left: 0;
+      border-top: 5px solid #c59a3b;
+    }
+
+    .sabbath-text {
+      border-left: 1px solid #ddd5c3;
+      border-top: 0;
+    }
+
+  }
+
+  @media (max-width: 650px) {
+
+    .faith-path {
+      grid-template-columns: 1fr;
+    }
+
+    .gospel-heading,
+    .gospel-content,
+    .sabbath-heading,
+    .sabbath-text {
+      padding: 2rem;
+    }
+
+    .faith-item {
+      padding: 5rem 1.5rem 1.75rem;
+    }
+
+    .faith-number {
+      top: 1.35rem;
+      left: 1.5rem;
+    }
+
+  }
+
+</style>
 </head>
 
 <body>
@@ -28,15 +444,22 @@
 <div class="header-inner">
 
 <a class="brand" href="index.html">
-<img src="assets/images/church-icon.svg" alt="">
+
+<img
+  src="assets/images/church-icon.svg"
+  alt=""
+>
 
 <div>
+
 <strong>Israel Church of God</strong>
 
 <span>
 SEVENTH DAY HOLINESS · EST. 1957
 </span>
+
 </div>
+
 </a>
 
 <button
@@ -48,6 +471,7 @@ Menu
 </button>
 
 <nav aria-label="Primary navigation">
+
 <ul>
 
 <li>
@@ -55,7 +479,10 @@ Menu
 </li>
 
 <li>
-<a href="beliefs.html" aria-current="page">
+<a
+  href="beliefs.html"
+  aria-current="page"
+>
 Our Beliefs
 </a>
 </li>
@@ -73,6 +500,7 @@ Our Beliefs
 </li>
 
 </ul>
+
 </nav>
 
 </div>
@@ -81,6 +509,7 @@ Our Beliefs
 <main id="main">
 
 <section class="page-hero">
+
 <div class="container">
 
 <div class="eyebrow">
@@ -90,83 +519,208 @@ What We Believe and Teach
 <h1>Our Beliefs</h1>
 
 <p>
-Our gospel is after the manner of Jesus Christ. Our faith and
-practice are grounded in the Holy Scriptures, obedience to God’s
-commandments, holiness, and the teachings of Jesus Christ.
+Our faith and practice are grounded in the Holy Scriptures,
+obedience to God’s commandments, holiness, and the doctrine
+taught by Jesus Christ.
 </p>
 
 </div>
+
 </section>
 
 <section class="section">
+
 <div class="container">
 
-<div class="beliefs">
+<div class="beliefs-introduction">
 
-<article class="card belief">
-<h3>The Gospel of Jesus Christ</h3>
+<h2>A Faith Rooted in Scripture</h2>
 
 <p>
-Our gospel is after the manner of Jesus Christ.
+Our beliefs shape how we worship, how we live, and how we serve.
+They reflect our commitment to the Gospel of Jesus Christ,
+obedience to God, and holy living.
 </p>
-</article>
 
-<article class="card belief">
+</div>
+
+<div class="beliefs-foundation">
+
+<div class="foundation-item">
+
+<div class="foundation-number">
+1
+</div>
+
+<h3>The Gospel</h3>
+
+<p>
+After the manner of Jesus Christ.
+</p>
+
+</div>
+
+<div class="foundation-item">
+
+<div class="foundation-number">
+2
+</div>
+
+<h3>God’s Commandments</h3>
+
+<p>
+Obedience to all that God has commanded.
+</p>
+
+</div>
+
+<div class="foundation-item">
+
+<div class="foundation-number">
+3
+</div>
+
+<h3>Holy Living</h3>
+
+<p>
+A life shaped by Scripture, worship, and the Holy Ghost.
+</p>
+
+</div>
+
+</div>
+
+<!-- The Gospel -->
+
+<section class="belief-section">
+
+<div class="section-label">
+<span>The Foundation</span>
+</div>
+
+<div class="gospel-feature">
+
+<div class="gospel-heading">
+
+<div class="small-title">
+The Gospel
+</div>
+
+<h2>
+After the Manner of Jesus Christ
+</h2>
+
+</div>
+
+<div class="gospel-content">
+
+<blockquote>
+“Our gospel is after the manner of Jesus Christ.”
+</blockquote>
+
+<p>
+The life, teaching, sacrifice, and example of Jesus Christ form
+the foundation of our Gospel and the pattern of our faith.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Ministry and Obedience -->
+
+<section class="belief-section">
+
+<div class="section-label">
+<span>Ministry and Obedience</span>
+</div>
+
+<div class="ministry-obedience">
+
+<article class="feature-belief">
+
 <h3>Five-Fold Ministry</h3>
 
 <p>
-“And he gave some, apostles; and some, prophets; and some,
-evangelists; and some, pastors and teachers.”
+“And he gave some apostles, and some prophets, and some
+evangelists and some pastors and teachers.”
 </p>
 
-<p>
-<strong>Ephesians 4:11</strong>
-</p>
+<span class="scripture-reference">
+Ephesians 4:11
+</span>
+
 </article>
 
-<article class="card belief">
+<div class="obedience-stack">
+
+<article class="obedience-item">
+
 <h3>Obedience to God</h3>
 
 <p>
-We believe in obeying all of God’s commandments.
+Obey all of God’s commandments.
 </p>
 
-<p>
-<strong>I John 2:1–6</strong>
-</p>
+<span class="scripture-reference">
+I John 2:1–6
+</span>
+
 </article>
 
-<article class="card belief">
+<article class="obedience-item">
+
 <h3>The Ten Commandments</h3>
 
 <p>
-We believe in obeying the Ten Commandments, including keeping
-the Sabbath Day holy.
+Obeying the Ten Commandments, including keeping the Sabbath
+Day holy.
 </p>
 
-<p>
-<strong>Exodus 20:3–17</strong>
-</p>
+<span class="scripture-reference">
+Exodus 20:3–17
+</span>
+
 </article>
 
-<article
-  class="card belief"
-  style="grid-column: 1 / -1;"
->
-<h3>We Observe the Seventh-Day Sabbath</h3>
+</div>
 
-<blockquote
-  style="
-    margin: 1.25rem 0;
-    padding: 1.35rem 1.5rem;
-    background: #f7f3e8;
-    border-left: 5px solid #c59a3b;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.05rem;
-    line-height: 1.75;
-  "
->
-“Remember the Sabbath Day, to keep it holy. Six days shalt thou
+</div>
+
+</section>
+
+<!-- Sabbath -->
+
+<section class="belief-section">
+
+<div class="section-label">
+<span>The Seventh-Day Sabbath</span>
+</div>
+
+<div class="sabbath-section">
+
+<div class="sabbath-heading">
+
+<div class="number">
+7
+</div>
+
+<h2>
+We Observe the Seventh-Day Sabbath
+</h2>
+
+<p>
+The seventh day, Saturday, is the Sabbath of the Lord.
+</p>
+
+</div>
+
+<div class="sabbath-text">
+
+<blockquote>
+“Remember the Sabbath Day to keep it holy. Six days shalt thou
 labour, and do all thy work: But the seventh day is the Sabbath
 of the Lord thy God: in it thou shalt not do any work, thou, nor
 thy son, nor thy daughter, thy manservant, nor thy maidservant,
@@ -176,87 +730,154 @@ that in them is, and rested the seventh day; wherefore the Lord
 blessed the Sabbath Day, and hallowed it.”
 </blockquote>
 
-<p>
-<strong>Exodus 20:8–11</strong>
-</p>
-</article>
+<div class="sabbath-reference">
+Exodus 20:8–11
+</div>
 
-<article class="card belief">
+</div>
+
+</div>
+
+</section>
+
+<!-- Life of Faith -->
+
+<section class="belief-section">
+
+<div class="section-label">
+<span>The Life of Faith</span>
+</div>
+
+<div class="faith-path">
+
+<article class="faith-item">
+
+<div class="faith-number">
+1
+</div>
+
 <h3>The Infilling of the Holy Ghost</h3>
 
 <p>
 We believe in the infilling of the Holy Ghost.
 </p>
 
-<p>
-<strong>Acts 2:1–4</strong>
-</p>
+<span class="scripture-reference">
+Acts 2:1–4
+</span>
+
 </article>
 
-<article class="card belief">
+<article class="faith-item">
+
+<div class="faith-number">
+2
+</div>
+
 <h3>Clean Eating</h3>
 
 <p>
 We believe in clean eating according to the Scriptures.
 </p>
 
-<p>
-<strong>Genesis 2:16–17 and Leviticus 11</strong>
-</p>
+<span class="scripture-reference">
+Genesis 2:16–17 and Leviticus 11
+</span>
+
 </article>
 
-<article class="card belief">
+<article class="faith-item">
+
+<div class="faith-number">
+3
+</div>
+
 <h3>Water Baptism</h3>
 
 <p>
 We believe in water baptism.
 </p>
 
-<p>
-<strong>Matthew 28:16–20</strong>
-</p>
+<span class="scripture-reference">
+Matthew 28:16–20
+</span>
+
 </article>
 
-<article class="card belief">
+<article class="faith-item">
+
+<div class="faith-number">
+4
+</div>
+
 <h3>Communion and Foot Washing</h3>
 
 <p>
 We observe communion and foot washing.
 </p>
+
 </article>
 
-<article class="card belief">
+<article class="faith-item">
+
+<div class="faith-number">
+5
+</div>
+
 <h3>Marriage</h3>
 
 <p>
-We believe in marriage between a man and woman who are
-qualified.
+Marriage between a man and woman who are qualified.
 </p>
+
 </article>
 
-<article class="card belief">
+<article class="faith-item featured-final">
+
+<div class="faith-number">
+6
+</div>
+
 <h3>Christ, the Sacrificial Lamb</h3>
 
 <p>
 Christ was offered once and for all as the sacrificial Lamb.
 </p>
 
-<p>
-<strong>No feast days.</strong>
-</p>
+<span class="scripture-reference">
+No feast days.
+</span>
+
 </article>
 
 </div>
 
+</section>
+
+<div class="belief-conclusion">
+
+<h2>Our Commitment</h2>
+
+<p>
+We seek to honor God through obedience, prayer, Sabbath worship,
+the ministry of the Holy Ghost, and lives patterned after Jesus
+Christ.
+</p>
+
 </div>
+
+</div>
+
 </section>
 
 </main>
 
 <footer>
+
 <div class="footer-grid">
 
 <div>
+
 <h3>Israel Church of God</h3>
 
 <p>
@@ -268,9 +889,11 @@ Established 1957
 “Fear God, and keep his commandments: for this is the whole
 duty of man.” — Ecclesiastes 12:13
 </p>
+
 </div>
 
 <div>
+
 <h3>Contact</h3>
 
 <p>
@@ -279,18 +902,23 @@ San Bernardino, CA 92411
 </p>
 
 <p>
+
 <a href="tel:+19094730026">
 (909) 473-0026
 </a>
+
 <br>
 
 <a href="mailto:icog7@outlook.com">
 icog7@outlook.com
 </a>
+
 </p>
+
 </div>
 
 <div>
+
 <h3>Services</h3>
 
 <p>
@@ -303,14 +931,18 @@ Friday Night Prayer<br>
 Saturday Sabbath School · 10 a.m.<br>
 Saturday General Service · 12 p.m.
 </p>
+
 </div>
 
 </div>
 
 <div class="copyright">
+
 © <span data-year></span>
 Israel Church of God, Seventh Day Holiness.
+
 </div>
+
 </footer>
 
 <script src="assets/script.js"></script>
