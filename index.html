@@ -87,17 +87,17 @@
   /* Our Foundation */
 
   .foundation-header {
-    max-width: 980px;
-    margin-bottom: 2.6rem;
+    max-width: 1020px;
+    margin-bottom: 2.75rem;
   }
 
   .foundation-label {
     display: inline-flex;
     align-items: center;
     gap: 0.7rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.15rem;
     color: #9a7424;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -110,13 +110,36 @@
     background: #c59a3b;
   }
 
-  .foundation-statement {
-    max-width: 980px;
-    margin: 0;
+  .foundation-message {
+    padding: 2.25rem 2.5rem;
+    background: #f7f3e8;
+    border-top: 5px solid #c59a3b;
+    border-left: 1px solid #ddd5c3;
+    border-right: 1px solid #ddd5c3;
+    border-bottom: 1px solid #ddd5c3;
+    box-shadow: 0 12px 28px rgba(15, 32, 69, 0.08);
+  }
+
+  .foundation-message .greeting {
+    margin-top: 0;
     color: #0f2045;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.7rem, 3.2vw, 2.7rem);
-    line-height: 1.35;
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+    line-height: 1.4;
+  }
+
+  .foundation-message p {
+    color: #343b47;
+    font-size: 1.06rem;
+    line-height: 1.8;
+  }
+
+  .foundation-message p:last-child {
+    margin-bottom: 0;
+    color: #9a7424;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
 
   /* Foundation cards */
@@ -161,6 +184,16 @@
 
   /* Visit section */
 
+  .visit-section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.75rem;
+    background: #fffdf8;
+    border-top: 5px solid #c59a3b;
+    box-shadow: 0 14px 32px rgba(15, 32, 69, 0.1);
+    text-align: center;
+  }
+
   .visit-label {
     display: inline-flex;
     align-items: center;
@@ -173,7 +206,8 @@
     text-transform: uppercase;
   }
 
-  .visit-label::before {
+  .visit-label::before,
+  .visit-label::after {
     content: "";
     width: 38px;
     height: 3px;
@@ -187,8 +221,16 @@
     line-height: 1.12;
   }
 
+  .visit-description {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
   .pastor-welcome {
-    margin-top: 1.5rem;
+    max-width: 620px;
+    margin: 1.75rem auto 0;
     padding: 1.35rem 1.5rem;
     background: #f7f3e8;
     border-left: 5px solid #c59a3b;
@@ -200,6 +242,27 @@
     color: #0f2045;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.2rem;
+  }
+
+  .visit-action {
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 650px) {
+
+    .foundation-message {
+      padding: 1.6rem;
+    }
+
+    .visit-section-inner {
+      padding: 2rem 1.5rem;
+    }
+
+    .visit-label::before,
+    .visit-label::after {
+      width: 22px;
+    }
+
   }
 
   @media (max-width: 560px) {
@@ -248,8 +311,6 @@ Skip to main content
 
 <svg viewBox="0 0 100 100" aria-hidden="true">
 
-<!-- Gold rays -->
-
 <g
   stroke="#c59a3b"
   stroke-width="2"
@@ -265,16 +326,12 @@ Skip to main content
 
 </g>
 
-<!-- Cross -->
-
 <path
   d="M50 7v18M43 14h14"
   stroke="#c59a3b"
   stroke-width="5"
   stroke-linecap="round"
 />
-
-<!-- Church roof -->
 
 <path
   d="M20 53L50 29l30 24"
@@ -286,8 +343,6 @@ Skip to main content
   fill="#ffffff"
 />
 
-<!-- Church body -->
-
 <rect
   x="27"
   y="50"
@@ -296,8 +351,6 @@ Skip to main content
   rx="1"
   fill="#ffffff"
 />
-
-<!-- Steeple -->
 
 <rect
   x="42"
@@ -312,14 +365,10 @@ Skip to main content
   fill="#c59a3b"
 />
 
-<!-- Door -->
-
 <path
   d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
   fill="#0f2045"
 />
-
-<!-- Windows -->
 
 <rect
   x="32"
@@ -338,8 +387,6 @@ Skip to main content
   rx="3"
   fill="#0f2045"
 />
-
-<!-- Ground -->
 
 <path
   d="M15 87c22-7 48-7 70 0"
@@ -474,10 +521,39 @@ Explore Our Beliefs
 Our Foundation
 </div>
 
-<p class="foundation-statement">
-Israel Church of God, Seventh Day Holiness has served
-San Bernardino since 1957.
+<div class="foundation-message">
+
+<p class="greeting">
+Greetings to all that love and fear God and keep His
+commandments.
 </p>
+
+<p>
+In April (Abib) 1957, we, the Israel Church of God, were chosen
+by God and given a charge to keep His commandments; this was
+done by the Holy Spirit through Apostle S. J. Allen, who passed
+away on June 14, 1996. We are not affiliated with any
+organization.
+</p>
+
+<p>
+The Church’s doctrine is after the manner of Jesus Christ; no
+other doctrine shall we know, so says the Holy Spirit. We also
+know that the Church of God is taught and led by the Holy
+Spirit, and that obedience is the key to all things pertaining
+to righteousness.
+</p>
+
+<p>
+If you are ever in the area, we welcome you to join us in the
+Sabbath evening and Sabbath day services.
+</p>
+
+<p>
+May God richly bless you.
+</p>
+
+</div>
 
 </div>
 
@@ -562,9 +638,9 @@ in truth.
 
 <section class="section">
 
-<div class="container split">
+<div class="container">
 
-<div>
+<div class="visit-section-inner">
 
 <div class="visit-label">
 Visit Israel Church of God
@@ -574,7 +650,7 @@ Visit Israel Church of God
 Come Worship With Us
 </h2>
 
-<p>
+<p class="visit-description">
 Located on North Mount Vernon in San Bernardino, our church
 continues a tradition of Sabbath worship, holiness, prayer, and
 service.
@@ -590,7 +666,7 @@ We look forward to welcoming you and your family.
 
 </div>
 
-<div style="margin-top: 1.4rem;">
+<div class="visit-action">
 
 <a class="btn btn-gold" href="visit.html">
 View Our Location
@@ -599,11 +675,6 @@ View Our Location
 </div>
 
 </div>
-
-<img
-  src="assets/images/church-front.jpg"
-  alt="Front view of Israel Church of God in San Bernardino"
->
 
 </div>
 
