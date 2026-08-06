@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -20,6 +21,8 @@
 >
 
 <style>
+
+  /* Header emblem */
 
   .brand-emblem {
     display: grid;
@@ -45,14 +48,46 @@
     font-size: 1.08rem;
   }
 
-  .hero-statement {
-    max-width: 670px;
-    font-size: 1.25rem;
-    line-height: 1.7;
+  /* Hero section */
+
+  .hero-church-name {
+    display: inline-block;
+    margin-bottom: 1.15rem;
+    padding: 0.6rem 1rem;
+    border-left: 4px solid #c59a3b;
+    background: rgba(15, 32, 69, 0.76);
+    color: #f1dfaa;
+    font-size: clamp(0.9rem, 2vw, 1.08rem);
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
   }
 
+  .hero-scripture {
+    max-width: 790px;
+    margin: 1.3rem 0 0;
+    color: #ffffff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.08rem, 2.3vw, 1.45rem);
+    line-height: 1.75;
+  }
+
+  .hero-scripture cite {
+    display: block;
+    margin-top: 0.8rem;
+    color: #e8d7a7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* Our Foundation */
+
   .foundation-header {
-    max-width: 930px;
+    max-width: 980px;
     margin-bottom: 2.6rem;
   }
 
@@ -62,7 +97,7 @@
     gap: 0.7rem;
     margin-bottom: 1rem;
     color: #9a7424;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     font-weight: bold;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -83,6 +118,8 @@
     font-size: clamp(1.7rem, 3.2vw, 2.7rem);
     line-height: 1.35;
   }
+
+  /* Foundation cards */
 
   .feature-grid {
     align-items: stretch;
@@ -122,13 +159,15 @@
     line-height: 1.7;
   }
 
+  /* Visit section */
+
   .visit-label {
     display: inline-flex;
     align-items: center;
     gap: 0.7rem;
     margin-bottom: 0.75rem;
     color: #9a7424;
-    font-size: 0.94rem;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -142,17 +181,10 @@
   }
 
   .visit-heading {
-    margin: 0 0 0.65rem;
+    margin: 0 0 1rem;
     color: #0f2045;
     font-size: clamp(2.3rem, 4vw, 3.6rem);
     line-height: 1.12;
-  }
-
-  .visit-subheading {
-    margin: 0 0 1rem;
-    color: #9a7424;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.45rem;
   }
 
   .pastor-welcome {
@@ -181,6 +213,10 @@
     .brand-emblem svg {
       width: 40px;
       height: 40px;
+    }
+
+    .hero-church-name {
+      letter-spacing: 0.09em;
     }
 
     .feature {
@@ -212,18 +248,24 @@ Skip to main content
 
 <svg viewBox="0 0 100 100" aria-hidden="true">
 
+<!-- Gold rays -->
+
 <g
   stroke="#c59a3b"
   stroke-width="2"
   stroke-linecap="round"
   opacity="0.75"
 >
+
 <path d="M50 5v11"/>
 <path d="M28 11l6 10"/>
 <path d="M72 11l-6 10"/>
 <path d="M12 29l11 5"/>
 <path d="M88 29l-11 5"/>
+
 </g>
+
+<!-- Cross -->
 
 <path
   d="M50 7v18M43 14h14"
@@ -231,6 +273,8 @@ Skip to main content
   stroke-width="5"
   stroke-linecap="round"
 />
+
+<!-- Church roof -->
 
 <path
   d="M20 53L50 29l30 24"
@@ -242,6 +286,8 @@ Skip to main content
   fill="#ffffff"
 />
 
+<!-- Church body -->
+
 <rect
   x="27"
   y="50"
@@ -250,6 +296,8 @@ Skip to main content
   rx="1"
   fill="#ffffff"
 />
+
+<!-- Steeple -->
 
 <rect
   x="42"
@@ -264,10 +312,14 @@ Skip to main content
   fill="#c59a3b"
 />
 
+<!-- Door -->
+
 <path
   d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
   fill="#0f2045"
 />
+
+<!-- Windows -->
 
 <rect
   x="32"
@@ -286,6 +338,8 @@ Skip to main content
   rx="3"
   fill="#0f2045"
 />
+
+<!-- Ground -->
 
 <path
   d="M15 87c22-7 48-7 70 0"
@@ -365,11 +419,13 @@ Visit Us
 
 <main id="main">
 
+<!-- Hero section -->
+
 <section class="hero">
 
 <div class="hero-inner">
 
-<div class="eyebrow">
+<div class="hero-church-name">
 Israel Church of God · Seventh Day Holiness
 </div>
 
@@ -377,15 +433,23 @@ Israel Church of God · Seventh Day Holiness
 A House of Prayer for All People
 </h1>
 
-<p class="hero-statement">
-Committed to holiness and gathered in reverence to worship God
-and keep His commandments.
-</p>
+<blockquote class="hero-scripture">
+
+“Even them will I bring to my holy mountain, and make them
+joyful in my house of prayer: their burnt offerings and their
+sacrifices shall be accepted upon mine altar; for mine house
+shall be called an house of prayer for all people.”
+
+<cite>
+Isaiah 56:7
+</cite>
+
+</blockquote>
 
 <div class="actions">
 
 <a class="btn btn-gold" href="visit.html">
-Plan Your Visit
+View Our Location
 </a>
 
 <a class="btn btn-line" href="beliefs.html">
@@ -397,6 +461,8 @@ Explore Our Beliefs
 </div>
 
 </section>
+
+<!-- Our Foundation -->
 
 <section class="section">
 
@@ -462,8 +528,8 @@ Prayer
 
 <p>
 Friday night prayer allows prayer for the health of the
-ministry, that all ministers will know their calling and abide
-in it, that ministers will be one everywhere, and that God will
+ministry; that all ministers will know their calling and abide
+in it; that ministers will be one everywhere; and that God will
 fill us with His Holy Spirit.
 </p>
 
@@ -492,6 +558,8 @@ in truth.
 
 </section>
 
+<!-- Visit Israel Church of God -->
+
 <section class="section">
 
 <div class="container split">
@@ -505,10 +573,6 @@ Visit Israel Church of God
 <h2 class="visit-heading">
 Come Worship With Us
 </h2>
-
-<p class="visit-subheading">
-A local church with a lasting spiritual foundation
-</p>
 
 <p>
 Located on North Mount Vernon in San Bernardino, our church
