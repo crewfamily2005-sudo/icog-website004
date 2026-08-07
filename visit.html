@@ -76,136 +76,11 @@
   }
 
   /* =========================================================
-     VISIT INFORMATION
-  ========================================================= */
-
-  .visit-grid {
-    display: grid;
-    grid-template-columns: .9fr 1.1fr;
-    gap: 2rem;
-    align-items: start;
-  }
-
-  .visit-panel {
-    padding: 2.25rem;
-    background: #ffffff;
-    border: 1px solid #ddd5c3;
-    border-top: 5px solid #c59a3b;
-    box-shadow: 0 12px 28px rgba(15,32,69,.09);
-  }
-
-  .visit-panel h2 {
-    margin: 0 0 1.5rem;
-    color: #0f2045;
-    font-size: 2rem;
-  }
-
-  .contact-item {
-    display: grid;
-    grid-template-columns: 52px 1fr;
-    gap: 1rem;
-    align-items: start;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid #e4dcc9;
-  }
-
-  .contact-item:last-child {
-    border-bottom: 0;
-  }
-
-  .contact-icon {
-    display: grid;
-    width: 48px;
-    height: 48px;
-    place-items: center;
-    border-radius: 50%;
-    background: #0f2045;
-    color: #e8d7a7;
-  }
-
-  .contact-icon svg {
-    width: 23px;
-    height: 23px;
-  }
-
-  .contact-item strong {
-    display: block;
-    margin-bottom: .3rem;
-    color: #0f2045;
-    font-size: 1.05rem;
-  }
-
-  .contact-item p {
-    margin: 0;
-    color: #505864;
-    line-height: 1.65;
-  }
-
-  .contact-item a {
-    color: #505864;
-  }
-
-  /* =========================================================
-     WORSHIP SCHEDULE
-  ========================================================= */
-
-  .schedule-panel {
-    padding: 2.25rem;
-    background: #f7f3e8;
-    border-left: 5px solid #c59a3b;
-  }
-
-  .schedule-panel h2 {
-    margin: 0 0 .5rem;
-    color: #0f2045;
-    font-size: 2rem;
-  }
-
-  .schedule-intro {
-    margin: 0 0 1.8rem;
-    color: #616873;
-  }
-
-  .service-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1.5rem;
-    align-items: center;
-    padding: 1.4rem 0;
-    border-bottom: 1px solid #d8c79e;
-  }
-
-  .service-row:last-child {
-    border-bottom: 0;
-  }
-
-  .service-row h3 {
-    margin: 0 0 .3rem;
-    color: #0f2045;
-    font-size: 1.3rem;
-  }
-
-  .service-row p {
-    margin: 0;
-    color: #656c77;
-    font-size: .92rem;
-  }
-
-  .service-time {
-    color: #9a7424;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.15rem;
-    font-weight: bold;
-    text-align: right;
-  }
-
-  /* =========================================================
      MAP
   ========================================================= */
 
   .map-section {
     background: #fffdf8;
-    border-top: 1px solid #d8c79e;
   }
 
   .map-heading {
@@ -225,6 +100,13 @@
     margin: 0;
     color: #0f2045;
     font-size: clamp(2rem,4vw,3rem);
+  }
+
+  .map-heading p {
+    margin: .8rem 0 0;
+    color: #565e69;
+    font-size: 1.05rem;
+    line-height: 1.7;
   }
 
   .map-frame {
@@ -340,7 +222,6 @@
 
   @media (max-width: 850px) {
 
-    .visit-grid,
     .contact-us-inner {
       grid-template-columns: 1fr;
     }
@@ -355,15 +236,6 @@
   }
 
   @media (max-width: 600px) {
-
-    .service-row {
-      grid-template-columns: 1fr;
-      gap: .6rem;
-    }
-
-    .service-time {
-      text-align: left;
-    }
 
     .map-frame iframe {
       height: 360px;
@@ -565,200 +437,6 @@ Isaiah 56:7
 
 </section>
 
-<!-- CHURCH INFORMATION AND WORSHIP SCHEDULE -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="visit-grid">
-
-<div class="visit-panel">
-
-<h2>
-Church Information
-</h2>
-
-<div class="contact-item">
-
-<div class="contact-icon">
-
-<svg
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  aria-hidden="true"
->
-<path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/>
-<circle cx="12" cy="9" r="2.5"/>
-</svg>
-
-</div>
-
-<div>
-
-<strong>
-Address
-</strong>
-
-<p>
-1650 North Mount Vernon<br>
-San Bernardino, CA 92411
-</p>
-
-</div>
-
-</div>
-
-<div class="contact-item">
-
-<div class="contact-icon">
-
-<svg
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  aria-hidden="true"
->
-<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/>
-</svg>
-
-</div>
-
-<div>
-
-<strong>
-Telephone
-</strong>
-
-<p>
-<a href="tel:+19094730026">
-(909) 473-0026
-</a>
-</p>
-
-</div>
-
-</div>
-
-<div class="contact-item">
-
-<div class="contact-icon">
-
-<svg
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  aria-hidden="true"
->
-<path d="M4 4h16v16H4z"/>
-<path d="m4 6 8 6 8-6"/>
-</svg>
-
-</div>
-
-<div>
-
-<strong>
-Email
-</strong>
-
-<p>
-<a href="mailto:icog7@outlook.com">
-icog7@outlook.com
-</a>
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- WORSHIP SCHEDULE -->
-
-<div class="schedule-panel">
-
-<h2>
-Worship Schedule
-</h2>
-
-<p class="schedule-intro">
-Join us for prayer, Sabbath School, and General Service.
-</p>
-
-<div class="service-row">
-
-<div>
-
-<h3>
-Friday Night Prayer
-</h3>
-
-<p>
-Prayer service
-</p>
-
-</div>
-
-<div class="service-time">
-7 p.m. Daylight Saving Time<br>
-6 p.m. Standard Time
-</div>
-
-</div>
-
-<div class="service-row">
-
-<div>
-
-<h3>
-Sabbath School
-</h3>
-
-<p>
-Saturday
-</p>
-
-</div>
-
-<div class="service-time">
-10 a.m.
-</div>
-
-</div>
-
-<div class="service-row">
-
-<div>
-
-<h3>
-General Service
-</h3>
-
-<p>
-Saturday
-</p>
-
-</div>
-
-<div class="service-time">
-12 p.m.
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 <!-- LOCATION -->
 
 <section class="section map-section">
@@ -774,6 +452,11 @@ Our Location
 <h2>
 Find Israel Church of God
 </h2>
+
+<p>
+1650 North Mount Vernon<br>
+San Bernardino, CA 92411
+</p>
 
 </div>
 
