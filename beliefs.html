@@ -22,50 +22,73 @@
 
 <style>
 
-  .beliefs-foundation {
+  /* =========================================================
+     WHAT GUIDES US
+  ========================================================= */
+
+  .principles-section {
+    background: #f5f0e5;
+  }
+
+  .principles-heading {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 4rem;
-    overflow: hidden;
-    border: 1px solid #ddd5c3;
-    border-top: 5px solid #c59a3b;
-    background: #ffffff;
-    box-shadow: 0 14px 32px rgba(15, 32, 69, 0.1);
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 3rem;
   }
 
-  .foundation-item {
-    position: relative;
-    padding: 2rem;
-    text-align: center;
+  .principles-heading .eyebrow-text {
+    color: #9a7424;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
 
-  .foundation-item + .foundation-item {
-    border-left: 1px solid #ddd5c3;
-  }
-
-  .foundation-number {
-    display: grid;
-    width: 42px;
-    height: 42px;
-    margin: 0 auto 1rem;
-    place-items: center;
-    border-radius: 50%;
-    background: #0f2045;
-    color: #e8d7a7;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.1rem;
-  }
-
-  .foundation-item h3 {
-    margin: 0.25rem 0 0.6rem;
-    color: #0f2045;
-    font-size: 1.35rem;
-  }
-
-  .foundation-item p {
+  .principles-heading h2 {
     margin: 0;
-    color: #6c7480;
+    color: #0f2045;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.15;
   }
+
+  .principles-list {
+    border-top: 1px solid #c9b98f;
+  }
+
+  .principle {
+    display: grid;
+    grid-template-columns: 90px 0.75fr 1.25fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 2.25rem 0;
+    border-bottom: 1px solid #c9b98f;
+  }
+
+  .principle-number {
+    color: #c59a3b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.3rem;
+    line-height: 1;
+  }
+
+  .principle h3 {
+    margin: 0;
+    color: #0f2045;
+    font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  }
+
+  .principle p {
+    margin: 0;
+    color: #4c5460;
+    font-size: 1.04rem;
+    line-height: 1.75;
+  }
+
+  /* =========================================================
+     BELIEF SECTIONS
+  ========================================================= */
 
   .belief-section {
     margin-bottom: 4.5rem;
@@ -92,6 +115,10 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
+
+  /* =========================================================
+     THE GOSPEL
+  ========================================================= */
 
   .gospel-feature {
     display: grid;
@@ -154,6 +181,10 @@
     margin: 1.25rem 0 0;
     color: #6c7480;
   }
+
+  /* =========================================================
+     MINISTRY & OBEDIENCE
+  ========================================================= */
 
   .ministry-obedience {
     display: grid;
@@ -227,6 +258,10 @@
     margin: 0;
   }
 
+  /* =========================================================
+     SABBATH
+  ========================================================= */
+
   .sabbath-section {
     display: grid;
     grid-template-columns: 0.38fr 0.62fr;
@@ -285,6 +320,10 @@
     font-weight: bold;
     text-align: right;
   }
+
+  /* =========================================================
+     LIFE OF FAITH
+  ========================================================= */
 
   .faith-path {
     position: relative;
@@ -346,6 +385,10 @@
     color: #e8d7a7;
   }
 
+  /* =========================================================
+     COMMITMENT
+  ========================================================= */
+
   .belief-conclusion {
     max-width: 920px;
     margin: 0 auto;
@@ -368,18 +411,21 @@
     font-size: 1.12rem;
   }
 
+  /* =========================================================
+     RESPONSIVE
+  ========================================================= */
+
   @media (max-width: 900px) {
 
-    .beliefs-foundation,
+    .principles-heading,
     .gospel-feature,
     .ministry-obedience,
     .sabbath-section {
       grid-template-columns: 1fr;
     }
 
-    .foundation-item + .foundation-item {
-      border-left: 0;
-      border-top: 1px solid #ddd5c3;
+    .principles-heading {
+      gap: 0.8rem;
     }
 
     .gospel-content {
@@ -390,6 +436,19 @@
     .sabbath-text {
       border-left: 1px solid #ddd5c3;
       border-top: 0;
+    }
+
+  }
+
+  @media (max-width: 700px) {
+
+    .principle {
+      grid-template-columns: 60px 1fr;
+      gap: 1rem;
+    }
+
+    .principle p {
+      grid-column: 2;
     }
 
   }
@@ -414,6 +473,22 @@
     .faith-number {
       top: 1.35rem;
       left: 1.5rem;
+    }
+
+  }
+
+  @media (max-width: 560px) {
+
+    .principle {
+      grid-template-columns: 1fr;
+    }
+
+    .principle p {
+      grid-column: auto;
+    }
+
+    .principle-number {
+      font-size: 1.8rem;
     }
 
   }
@@ -471,10 +546,7 @@ Home
 </li>
 
 <li>
-<a
-  href="beliefs.html"
-  aria-current="page"
->
+<a href="beliefs.html" aria-current="page">
 Our Beliefs
 </a>
 </li>
@@ -507,6 +579,8 @@ Visit Us
 
 <main id="main">
 
+<!-- PAGE HERO -->
+
 <section class="page-hero">
 
 <div class="container">
@@ -529,63 +603,108 @@ taught by Jesus Christ.
 
 </section>
 
+<!-- WHAT GUIDES US -->
+
+<section class="section principles-section">
+
+<div class="container">
+
+<div class="principles-heading">
+
+<div class="eyebrow-text">
+What Guides Us
+</div>
+
+<h2>
+The principles at the heart of our worship and fellowship
+</h2>
+
+</div>
+
+<div class="principles-list">
+
+<article class="principle">
+
+<div class="principle-number">
+01
+</div>
+
+<h3>
+Biblical Truth
+</h3>
+
+<p>
+We look to the Holy Spirit as our foundation for doctrine,
+worship, and daily living.
+</p>
+
+</article>
+
+<article class="principle">
+
+<div class="principle-number">
+02
+</div>
+
+<h3>
+Seventh-Day Sabbath
+</h3>
+
+<p>
+We gather on Saturday for Sabbath School and General Service.
+</p>
+
+</article>
+
+<article class="principle">
+
+<div class="principle-number">
+03
+</div>
+
+<h3>
+Prayer
+</h3>
+
+<p>
+Friday night prayer allows prayer for the health of the
+ministry; that all ministers will know their calling and abide
+in it; that ministers will be one everywhere; and that God will
+fill us with His Holy Spirit.
+</p>
+
+</article>
+
+<article class="principle">
+
+<div class="principle-number">
+04
+</div>
+
+<h3>
+Open Fellowship
+</h3>
+
+<p>
+Visitors are welcome to join us as we worship God in spirit and
+in truth.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DETAILED BELIEFS -->
+
 <section class="section">
 
 <div class="container">
 
-<div class="beliefs-foundation">
-
-<div class="foundation-item">
-
-<div class="foundation-number">
-1
-</div>
-
-<h3>
-The Gospel
-</h3>
-
-<p>
-After the manner of Jesus Christ.
-</p>
-
-</div>
-
-<div class="foundation-item">
-
-<div class="foundation-number">
-2
-</div>
-
-<h3>
-God’s Commandments
-</h3>
-
-<p>
-Obedience to all that God has commanded.
-</p>
-
-</div>
-
-<div class="foundation-item">
-
-<div class="foundation-number">
-3
-</div>
-
-<h3>
-Holy Living
-</h3>
-
-<p>
-A life shaped by Scripture, worship, and the Holy Ghost.
-</p>
-
-</div>
-
-</div>
-
-<!-- The Gospel -->
+<!-- THE GOSPEL -->
 
 <section class="belief-section">
 
@@ -628,7 +747,7 @@ the foundation of our Gospel and the pattern of our faith.
 
 </section>
 
-<!-- Ministry and Obedience -->
+<!-- MINISTRY AND OBEDIENCE -->
 
 <section class="belief-section">
 
@@ -700,7 +819,7 @@ Exodus 20:3–17
 
 </section>
 
-<!-- Sabbath -->
+<!-- SABBATH -->
 
 <section class="belief-section">
 
@@ -753,7 +872,7 @@ Exodus 20:8–11
 
 </section>
 
-<!-- The Life of Faith -->
+<!-- LIFE OF FAITH -->
 
 <section class="belief-section">
 
@@ -882,6 +1001,8 @@ No feast days.
 </div>
 
 </section>
+
+<!-- OUR COMMITMENT -->
 
 <div class="belief-conclusion">
 
