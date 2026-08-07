@@ -77,7 +77,7 @@
   }
 
   .history-label {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
     color: #9a7424;
     font-size: 0.78rem;
     font-weight: bold;
@@ -89,6 +89,7 @@
     margin-top: 0;
     color: #0f2045;
     font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.15;
   }
 
   .history-copy p {
@@ -96,39 +97,138 @@
   }
 
   .church-name-callout {
-    margin-top: 1.5rem;
-    padding: 1.6rem;
+    margin-top: 1.75rem;
+    padding: 1.75rem;
     background: #ffffff;
     border-left: 5px solid #c59a3b;
     box-shadow: 0 10px 24px rgba(15, 32, 69, 0.07);
   }
 
   .church-name-callout h3 {
-    margin-top: 0;
+    margin: 0 0 0.6rem;
     color: #0f2045;
+    font-size: 1.65rem;
   }
 
-  .history-timeline {
-    border-top: 1px solid #d8c79e;
+  /* =========================================================
+     GROWTH & DEVELOPMENT INTRO
+  ========================================================= */
+
+  .timeline-intro {
+    max-width: 800px;
+    margin-bottom: 3.25rem;
   }
 
-  .history-timeline article {
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    gap: 2rem;
-    padding: 2rem 0;
-    border-bottom: 1px solid #d8c79e;
-  }
-
-  .history-timeline h3 {
+  .timeline-intro h2 {
     margin: 0;
     color: #0f2045;
-    font-size: 1.35rem;
+    font-size: clamp(2.25rem, 4vw, 3.4rem);
+    line-height: 1.12;
   }
 
-  .history-timeline p {
-    margin-top: 0;
-    line-height: 1.75;
+  /* =========================================================
+     HISTORY TIMELINE
+  ========================================================= */
+
+  .history-timeline {
+    position: relative;
+    max-width: 1040px;
+    margin-top: 2rem;
+  }
+
+  .history-timeline::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 174px;
+    width: 2px;
+    background:
+      linear-gradient(
+        to bottom,
+        #c59a3b,
+        #d8c79e 20%,
+        #d8c79e 80%,
+        #c59a3b
+      );
+  }
+
+  .timeline-entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: 135px 48px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+    padding-bottom: 3.5rem;
+  }
+
+  .timeline-entry:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline-year {
+    padding-top: 0;
+    color: #c59a3b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.25rem, 4vw, 3rem);
+    font-weight: bold;
+    line-height: 1;
+    text-align: right;
+  }
+
+  .timeline-year.word {
+    padding-top: 1px;
+    color: #9a7424;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  .timeline-marker {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    width: 22px;
+    height: 22px;
+    margin: 4px auto 0;
+    place-items: center;
+    border: 4px solid #fffdf8;
+    border-radius: 50%;
+    background: #0f2045;
+    box-shadow: 0 0 0 2px #c59a3b;
+  }
+
+  .timeline-content {
+    position: relative;
+    padding: 0 0 2.4rem;
+    border-bottom: 1px solid #e0d6bd;
+  }
+
+  .timeline-entry:last-child .timeline-content {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .timeline-content h3 {
+    margin: 0 0 0.8rem;
+    color: #0f2045;
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    line-height: 1.25;
+  }
+
+  .timeline-content p {
+    max-width: 740px;
+    margin: 0 0 0.85rem;
+    color: #424a55;
+    font-size: 1.03rem;
+    line-height: 1.8;
+  }
+
+  .timeline-content p:last-child {
+    margin-bottom: 0;
   }
 
   /* =========================================================
@@ -188,15 +288,53 @@
     box-shadow: 0 14px 30px rgba(15, 32, 69, 0.12);
   }
 
-  @media (max-width: 900px) {
+  /* =========================================================
+     RESPONSIVE
+  ========================================================= */
 
-    .history-timeline article {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
+  @media (max-width: 900px) {
 
     .church-today-layout {
       grid-template-columns: 1fr;
+    }
+
+  }
+
+  @media (max-width: 720px) {
+
+    .history-timeline::before {
+      left: 10px;
+    }
+
+    .timeline-entry {
+      grid-template-columns: 32px minmax(0, 1fr);
+      gap: 1rem;
+      padding-bottom: 2.75rem;
+    }
+
+    .timeline-year {
+      grid-column: 2;
+      grid-row: 1;
+      padding-top: 0;
+      font-size: 2.15rem;
+      text-align: left;
+    }
+
+    .timeline-year.word {
+      font-size: 0.72rem;
+    }
+
+    .timeline-marker {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      width: 20px;
+      height: 20px;
+      margin-top: 4px;
+    }
+
+    .timeline-content {
+      grid-column: 2;
+      grid-row: 2;
     }
 
   }
@@ -587,7 +725,7 @@ Members and descendants of the Allen family
 
 <div class="container">
 
-<div class="section-head">
+<div class="timeline-intro">
 
 <div class="history-label">
 Growth and Development
@@ -601,13 +739,24 @@ A Permanent Home and Expanding Ministry
 
 <div class="history-timeline">
 
-<article>
+<!-- 1963 -->
+
+<article class="timeline-entry">
+
+<div class="timeline-year">
+1963
+</div>
+
+<div
+  class="timeline-marker"
+  aria-hidden="true"
+></div>
+
+<div class="timeline-content">
 
 <h3>
-1963 · The First Church Building
+The First Church Building
 </h3>
-
-<div>
 
 <p>
 In 1963, the church obtained a building—an old courthouse—which
@@ -625,13 +774,24 @@ at 263 East Dumas Street in San Bernardino.
 
 </article>
 
-<article>
+<!-- 1967 -->
+
+<article class="timeline-entry">
+
+<div class="timeline-year">
+1967
+</div>
+
+<div
+  class="timeline-marker"
+  aria-hidden="true"
+></div>
+
+<div class="timeline-content">
 
 <h3>
-1967 · Friday Evening Prayer
+Friday Evening Prayer
 </h3>
-
-<div>
 
 <p>
 In 1967, the church was led to pray on Friday evenings for the
@@ -647,13 +807,25 @@ developed into Monday night prayer and Bible study.
 
 </article>
 
-<article>
+<!-- NOON DAY PRAYER -->
+
+<article class="timeline-entry">
+
+<div class="timeline-year word">
+As the<br>
+Ministry Grew
+</div>
+
+<div
+  class="timeline-marker"
+  aria-hidden="true"
+></div>
+
+<div class="timeline-content">
 
 <h3>
 Noon Day Prayer
 </h3>
-
-<div>
 
 <p>
 At one point, faithful members began gathering at the church on
@@ -665,13 +837,24 @@ as “Noon Day Prayer.”
 
 </article>
 
-<article>
+<!-- 1996 -->
+
+<article class="timeline-entry">
+
+<div class="timeline-year">
+1996
+</div>
+
+<div
+  class="timeline-marker"
+  aria-hidden="true"
+></div>
+
+<div class="timeline-content">
 
 <h3>
-1996 · The Founder Is Called Home
+The Founder Is Called Home
 </h3>
-
-<div>
 
 <p>
 Bro. Samuel J. Allen was called home in 1996, but the church
@@ -682,13 +865,24 @@ continued and prospered under the direction of the Holy Spirit.
 
 </article>
 
-<article>
+<!-- 1998 -->
+
+<article class="timeline-entry">
+
+<div class="timeline-year">
+1998
+</div>
+
+<div
+  class="timeline-marker"
+  aria-hidden="true"
+></div>
+
+<div class="timeline-content">
 
 <h3>
-1998 · The Present Property Is Purchased
+The Present Property Is Purchased
 </h3>
-
-<div>
 
 <p>
 The current property, formerly known as the Old Bank of America
@@ -699,13 +893,24 @@ building, was purchased in 1998.
 
 </article>
 
-<article>
+<!-- 2004 -->
+
+<article class="timeline-entry">
+
+<div class="timeline-year">
+2004
+</div>
+
+<div
+  class="timeline-marker"
+  aria-hidden="true"
+></div>
+
+<div class="timeline-content">
 
 <h3>
-2004 · Renovations Are Completed
+Renovations Are Completed
 </h3>
-
-<div>
 
 <p>
 The final renovations to the former bank building were completed
