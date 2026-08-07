@@ -23,6 +23,34 @@
 <style>
 
   /* =========================================================
+     HEADER EMBLEM
+  ========================================================= */
+
+  .brand-emblem {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    place-items: center;
+    overflow: hidden;
+    border: 2px solid #c59a3b;
+    border-radius: 50%;
+    background: #0f2045;
+    box-shadow:
+      0 0 0 3px rgba(197, 154, 59, 0.18),
+      0 4px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  .brand-emblem svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand strong {
+    font-size: 1.08rem;
+  }
+
+  /* =========================================================
      BELIEF SECTIONS
   ========================================================= */
 
@@ -322,32 +350,6 @@
   }
 
   /* =========================================================
-     COMMITMENT
-  ========================================================= */
-
-  .belief-conclusion {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 2.5rem;
-    text-align: center;
-    background: #f7f3e8;
-    border-top: 5px solid #c59a3b;
-  }
-
-  .belief-conclusion h2 {
-    margin: 0 0 0.75rem;
-    color: #0f2045;
-    font-size: 2rem;
-  }
-
-  .belief-conclusion p {
-    margin: 0;
-    color: #5f6672;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.12rem;
-  }
-
-  /* =========================================================
      RESPONSIVE
   ========================================================= */
 
@@ -395,6 +397,21 @@
 
   }
 
+  @media (max-width: 560px) {
+
+    .brand-emblem {
+      width: 50px;
+      height: 50px;
+      flex-basis: 50px;
+    }
+
+    .brand-emblem svg {
+      width: 40px;
+      height: 40px;
+    }
+
+  }
+
 </style>
 </head>
 
@@ -410,10 +427,102 @@ Skip to main content
 
 <a class="brand" href="index.html">
 
-<img
-  src="assets/images/church-icon.svg"
-  alt=""
+<div
+  class="brand-emblem"
+  role="img"
+  aria-label="Israel Church of God church emblem"
 >
+
+<svg viewBox="0 0 100 100" aria-hidden="true">
+
+<g
+  stroke="#c59a3b"
+  stroke-width="2"
+  stroke-linecap="round"
+  opacity="0.75"
+>
+
+<path d="M50 5v11"/>
+<path d="M28 11l6 10"/>
+<path d="M72 11l-6 10"/>
+<path d="M12 29l11 5"/>
+<path d="M88 29l-11 5"/>
+
+</g>
+
+<path
+  d="M50 7v18M43 14h14"
+  stroke="#c59a3b"
+  stroke-width="5"
+  stroke-linecap="round"
+/>
+
+<path
+  d="M20 53L50 29l30 24"
+  fill="#c59a3b"
+/>
+
+<path
+  d="M27 52L50 35l23 17"
+  fill="#ffffff"
+/>
+
+<rect
+  x="27"
+  y="50"
+  width="46"
+  height="35"
+  rx="1"
+  fill="#ffffff"
+/>
+
+<rect
+  x="42"
+  y="27"
+  width="16"
+  height="23"
+  fill="#ffffff"
+/>
+
+<path
+  d="M39 29L50 19l11 10"
+  fill="#c59a3b"
+/>
+
+<path
+  d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
+  fill="#0f2045"
+/>
+
+<rect
+  x="32"
+  y="61"
+  width="7"
+  height="11"
+  rx="3"
+  fill="#0f2045"
+/>
+
+<rect
+  x="61"
+  y="61"
+  width="7"
+  height="11"
+  rx="3"
+  fill="#0f2045"
+/>
+
+<path
+  d="M15 87c22-7 48-7 70 0"
+  fill="none"
+  stroke="#c59a3b"
+  stroke-width="3"
+  stroke-linecap="round"
+/>
+
+</svg>
+
+</div>
 
 <div>
 
@@ -808,22 +917,6 @@ No feast days.
 </div>
 
 </section>
-
-<!-- OUR COMMITMENT -->
-
-<div class="belief-conclusion">
-
-<h2>
-Our Commitment
-</h2>
-
-<p>
-We seek to honor God through obedience, prayer, Sabbath worship,
-the ministry of the Holy Ghost, and lives patterned after Jesus
-Christ.
-</p>
-
-</div>
 
 </div>
 
