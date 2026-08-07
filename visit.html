@@ -9,7 +9,7 @@
 
 <meta
   name="description"
-  content="Visit Israel Church of God, Seventh Day Holiness, at 1650 North Mount Vernon in San Bernardino, California."
+  content="Visit Israel Church of God, Seventh Day Holiness, in San Bernardino, California."
 >
 
 <link rel="stylesheet" href="assets/styles.css">
@@ -22,7 +22,9 @@
 
 <style>
 
-  /* Header emblem */
+  /* =========================================================
+     HEADER EMBLEM
+  ========================================================= */
 
   .brand-emblem {
     display: grid;
@@ -48,190 +50,259 @@
     font-size: 1.08rem;
   }
 
-  /* Visit page */
+  /* =========================================================
+     HERO SCRIPTURE
+  ========================================================= */
 
-  .visit-layout {
-    display: grid;
-    grid-template-columns: 0.82fr 1.18fr;
-    gap: 2rem;
-    align-items: stretch;
+  .visit-hero-scripture {
+    max-width: 760px;
+    margin: 1.1rem 0 0;
+    color: inherit;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.15rem, 2.3vw, 1.5rem);
+    line-height: 1.7;
   }
 
-  .church-information {
-    padding: 2rem;
-    background: #0f2045;
-    border-top: 5px solid #c59a3b;
-    color: white;
-  }
-
-  .church-information h2,
-  .church-information h3 {
-    color: white;
-  }
-
-  .church-information h2 {
-    margin-top: 0;
-    font-size: 2rem;
-  }
-
-  .contact-details {
-    margin: 1.5rem 0 2rem;
-    padding: 0;
-    list-style: none;
-  }
-
-  .contact-details li {
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 0.8rem;
-    align-items: start;
-    margin-bottom: 1.35rem;
-  }
-
-  .contact-icon {
-    display: grid;
-    width: 40px;
-    height: 40px;
-    place-items: center;
-    border-radius: 50%;
-    background: #c59a3b;
-    color: #0f2045;
-    font-weight: bold;
-  }
-
-  .contact-details strong {
+  .visit-hero-scripture cite {
     display: block;
-    margin-bottom: 0.2rem;
+    margin-top: 0.7rem;
     color: #e8d7a7;
-    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.78rem;
+    font-style: normal;
+    font-weight: bold;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 
-  .contact-details a {
-    color: white;
-    text-decoration-color: #c59a3b;
-    text-underline-offset: 3px;
+  /* =========================================================
+     VISIT INFORMATION
+  ========================================================= */
+
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2rem;
+    align-items: start;
   }
 
-  .service-list {
-    margin-top: 1.25rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .service-item {
-    margin-bottom: 1.15rem;
-  }
-
-  .service-item strong {
-    display: block;
-    color: #e8d7a7;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.1rem;
-  }
-
-  .map-panel {
-    overflow: hidden;
-    background: white;
+  .visit-panel {
+    padding: 2.25rem;
+    background: #ffffff;
     border: 1px solid #ddd5c3;
     border-top: 5px solid #c59a3b;
-    box-shadow: 0 14px 32px rgba(15, 32, 69, 0.12);
+    box-shadow: 0 12px 28px rgba(15, 32, 69, 0.09);
+  }
+
+  .visit-panel h2 {
+    margin: 0 0 1.5rem;
+    color: #0f2045;
+    font-size: 2rem;
+  }
+
+  .contact-item {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #e4dcc9;
+  }
+
+  .contact-item:last-child {
+    border-bottom: 0;
+  }
+
+  .contact-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 50%;
+    background: #0f2045;
+    color: #e8d7a7;
+  }
+
+  .contact-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .contact-item strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #0f2045;
+    font-size: 1.05rem;
+  }
+
+  .contact-item p {
+    margin: 0;
+    color: #505864;
+    line-height: 1.65;
+  }
+
+  .contact-item a {
+    color: #505864;
+  }
+
+  /* =========================================================
+     WORSHIP SCHEDULE
+  ========================================================= */
+
+  .schedule-panel {
+    padding: 2.25rem;
+    background: #f7f3e8;
+    border-left: 5px solid #c59a3b;
+  }
+
+  .schedule-panel h2 {
+    margin: 0 0 0.5rem;
+    color: #0f2045;
+    font-size: 2rem;
+  }
+
+  .schedule-intro {
+    margin: 0 0 1.8rem;
+    color: #616873;
+  }
+
+  .service-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid #d8c79e;
+  }
+
+  .service-row:last-child {
+    border-bottom: 0;
+  }
+
+  .service-row h3 {
+    margin: 0 0 0.3rem;
+    color: #0f2045;
+    font-size: 1.3rem;
+  }
+
+  .service-row p {
+    margin: 0;
+    color: #656c77;
+    font-size: 0.92rem;
+  }
+
+  .service-time {
+    color: #9a7424;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  /* =========================================================
+     MAP
+  ========================================================= */
+
+  .map-section {
+    background: #fffdf8;
+    border-top: 1px solid #d8c79e;
   }
 
   .map-heading {
-    padding: 1.4rem 1.5rem;
-    background: #fffdf8;
+    margin-bottom: 1.5rem;
+  }
+
+  .map-heading .eyebrow-text {
+    margin-bottom: 0.5rem;
+    color: #9a7424;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
   }
 
   .map-heading h2 {
-    margin: 0 0 0.35rem;
-    color: #0f2045;
-    font-size: 1.8rem;
-  }
-
-  .map-heading p {
     margin: 0;
-    color: #6c7480;
+    color: #0f2045;
+    font-size: clamp(2rem, 4vw, 3rem);
   }
 
-  .google-map {
-    position: relative;
-    min-height: 480px;
-    background: #f2eee4;
+  .map-frame {
+    overflow: hidden;
+    border: 1px solid #d7cfbc;
+    box-shadow: 0 12px 30px rgba(15, 32, 69, 0.10);
   }
 
-  .google-map iframe {
+  .map-frame iframe {
     display: block;
     width: 100%;
-    height: 480px;
+    height: 450px;
     border: 0;
   }
 
   .map-actions {
     display: flex;
-    gap: 0.75rem;
     flex-wrap: wrap;
-    padding: 1.25rem 1.5rem 1.5rem;
-    background: white;
+    gap: 0.8rem;
+    margin-top: 1.25rem;
   }
 
-  .directions-button {
-    display: inline-block;
-    padding: 0.8rem 1.1rem;
-    border-radius: 3px;
-    background: #c59a3b;
-    color: #07132b;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  .directions-button:hover {
-    background: #d8ad50;
-  }
-
-  .address-button {
-    display: inline-block;
-    padding: 0.8rem 1.1rem;
-    border: 1px solid #0f2045;
-    border-radius: 3px;
-    color: #0f2045;
-    font-weight: bold;
-    text-decoration: none;
-  }
+  /* =========================================================
+     WELCOME
+  ========================================================= */
 
   .welcome-section {
-    margin-top: 4rem;
-    padding: 2.5rem;
-    background: #f7f3e8;
-    border-left: 6px solid #c59a3b;
+    border-top: 1px solid #d8c79e;
+    background: #ffffff;
+  }
+
+  .welcome-inner {
+    max-width: 850px;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .welcome-section h2 {
-    margin: 0 0 0.75rem;
+  .welcome-inner h2 {
+    margin: 0;
     color: #0f2045;
-    font-size: 2rem;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.15;
   }
 
-  .welcome-section p {
-    max-width: 760px;
-    margin: 0 auto;
-    color: #5f6672;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.08rem;
+  .welcome-inner::before {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin: 0 auto 1.5rem;
+    background: #c59a3b;
   }
 
-  @media (max-width: 900px) {
+  /* =========================================================
+     RESPONSIVE
+  ========================================================= */
 
-    .visit-layout {
+  @media (max-width: 850px) {
+
+    .visit-grid {
       grid-template-columns: 1fr;
     }
 
-    .google-map,
-    .google-map iframe {
-      min-height: 420px;
-      height: 420px;
+  }
+
+  @media (max-width: 600px) {
+
+    .service-row {
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+
+    .service-time {
+      text-align: left;
+    }
+
+    .map-frame iframe {
+      height: 360px;
     }
 
   }
@@ -247,27 +318,6 @@
     .brand-emblem svg {
       width: 40px;
       height: 40px;
-    }
-
-    .church-information,
-    .welcome-section {
-      padding: 1.5rem;
-    }
-
-    .google-map,
-    .google-map iframe {
-      min-height: 350px;
-      height: 350px;
-    }
-
-    .map-actions {
-      flex-direction: column;
-    }
-
-    .directions-button,
-    .address-button {
-      width: 100%;
-      text-align: center;
     }
 
   }
@@ -301,11 +351,13 @@ Skip to main content
   stroke-linecap="round"
   opacity="0.75"
 >
+
 <path d="M50 5v11"/>
 <path d="M28 11l6 10"/>
 <path d="M72 11l-6 10"/>
 <path d="M12 29l11 5"/>
 <path d="M88 29l-11 5"/>
+
 </g>
 
 <path
@@ -448,6 +500,8 @@ Visit Us
 
 <main id="main">
 
+<!-- PAGE HERO -->
+
 <section class="page-hero">
 
 <div class="container">
@@ -460,33 +514,51 @@ You Are Welcome
 Visit Us
 </h1>
 
-<p>
-Join us for Sabbath worship, Bible study, prayer, and fellowship
-in San Bernardino.
-</p>
+<blockquote class="visit-hero-scripture">
+
+“For my house shall be called a house of prayer for all people.”
+
+<cite>
+Isaiah 56:7
+</cite>
+
+</blockquote>
 
 </div>
 
 </section>
 
+<!-- CHURCH INFORMATION AND WORSHIP SCHEDULE -->
+
 <section class="section">
 
 <div class="container">
 
-<div class="visit-layout">
+<div class="visit-grid">
 
-<section class="church-information">
+<!-- CHURCH INFORMATION -->
+
+<div class="visit-panel">
 
 <h2>
 Church Information
 </h2>
 
-<ul class="contact-details">
+<div class="contact-item">
 
-<li>
+<div class="contact-icon">
 
-<div class="contact-icon" aria-hidden="true">
-⌖
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  aria-hidden="true"
+>
+<path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/>
+<circle cx="12" cy="9" r="2.5"/>
+</svg>
+
 </div>
 
 <div>
@@ -495,17 +567,29 @@ Church Information
 Address
 </strong>
 
+<p>
 1650 North Mount Vernon<br>
-San Bernardino, California 92411
+San Bernardino, CA 92411
+</p>
 
 </div>
 
-</li>
+</div>
 
-<li>
+<div class="contact-item">
 
-<div class="contact-icon" aria-hidden="true">
-☎
+<div class="contact-icon">
+
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  aria-hidden="true"
+>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"/>
+</svg>
+
 </div>
 
 <div>
@@ -514,18 +598,31 @@ San Bernardino, California 92411
 Telephone
 </strong>
 
+<p>
 <a href="tel:+19094730026">
 (909) 473-0026
 </a>
+</p>
 
 </div>
 
-</li>
+</div>
 
-<li>
+<div class="contact-item">
 
-<div class="contact-icon" aria-hidden="true">
-✉
+<div class="contact-icon">
+
+<svg
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  aria-hidden="true"
+>
+<path d="M4 4h16v16H4z"/>
+<path d="m4 6 8 6 8-6"/>
+</svg>
+
 </div>
 
 <div>
@@ -534,50 +631,92 @@ Telephone
 Email
 </strong>
 
+<p>
 <a href="mailto:icog7@outlook.com">
 icog7@outlook.com
 </a>
+</p>
 
 </div>
 
-</li>
+</div>
 
-</ul>
+</div>
 
-<div class="service-list">
+<!-- WORSHIP SCHEDULE -->
+
+<div class="schedule-panel">
+
+<h2>
+Worship Schedule
+</h2>
+
+<p class="schedule-intro">
+Join us for prayer, Sabbath School, and General Service.
+</p>
+
+<div class="service-row">
+
+<div>
 
 <h3>
-Worship Schedule
+Friday Night Prayer
 </h3>
 
-<div class="service-item">
+<p>
+Prayer service
+</p>
 
-<strong>
-Friday Night Prayer
-</strong>
+</div>
 
+<div class="service-time">
 7 p.m. Daylight Saving Time<br>
 6 p.m. Standard Time
+</div>
 
 </div>
 
-<div class="service-item">
+<div class="service-row">
 
-<strong>
+<div>
+
+<h3>
 Sabbath School
-</strong>
+</h3>
 
-Saturday at 10 a.m.
+<p>
+Saturday
+</p>
 
 </div>
 
-<div class="service-item">
+<div class="service-time">
+10 a.m.
+</div>
 
-<strong>
+</div>
+
+<div class="service-row">
+
+<div>
+
+<h3>
 General Service
-</strong>
+</h3>
 
-Saturday at 12 p.m.
+<p>
+Saturday
+</p>
+
+</div>
+
+<div class="service-time">
+12 p.m.
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -585,37 +724,39 @@ Saturday at 12 p.m.
 
 </section>
 
-<section class="map-panel">
+<!-- LOCATION -->
+
+<section class="section map-section">
+
+<div class="container">
 
 <div class="map-heading">
 
-<h2>
-Find Our Church
-</h2>
+<div class="eyebrow-text">
+Our Location
+</div>
 
-<p>
-Use the map below to view our location and plan your route.
-</p>
+<h2>
+Find Israel Church of God
+</h2>
 
 </div>
 
-<div class="google-map">
+<div class="map-frame">
 
 <iframe
   src="https://www.google.com/maps?q=1650+North+Mount+Vernon+San+Bernardino+CA+92411&output=embed"
-  title="Google Map showing Israel Church of God at 1650 North Mount Vernon in San Bernardino"
   loading="lazy"
-  allowfullscreen
   referrerpolicy="no-referrer-when-downgrade"
->
-</iframe>
+  title="Map showing Israel Church of God in San Bernardino"
+></iframe>
 
 </div>
 
 <div class="map-actions">
 
 <a
-  class="directions-button"
+  class="btn btn-gold"
   href="https://www.google.com/maps/dir/?api=1&destination=1650+North+Mount+Vernon+San+Bernardino+CA+92411"
   target="_blank"
   rel="noopener"
@@ -624,7 +765,7 @@ Get Directions
 </a>
 
 <a
-  class="address-button"
+  class="btn"
   href="https://www.google.com/maps/search/?api=1&query=1650+North+Mount+Vernon+San+Bernardino+CA+92411"
   target="_blank"
   rel="noopener"
@@ -634,20 +775,21 @@ View Larger Map
 
 </div>
 
-</section>
-
 </div>
 
-<div class="welcome-section">
+</section>
+
+<!-- WELCOME -->
+
+<section class="section welcome-section">
+
+<div class="container">
+
+<div class="welcome-inner">
 
 <h2>
 We Look Forward to Welcoming You
 </h2>
-
-<p>
-We invite you to worship with us as we gather for prayer,
-Sabbath study, preaching, fellowship, and service to God.
-</p>
 
 </div>
 
