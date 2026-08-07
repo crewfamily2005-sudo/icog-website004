@@ -37,8 +37,8 @@
     border-radius: 50%;
     background: #0f2045;
     box-shadow:
-      0 0 0 3px rgba(197, 154, 59, 0.18),
-      0 4px 12px rgba(0, 0, 0, 0.22);
+      0 0 0 3px rgba(197,154,59,.18),
+      0 4px 12px rgba(0,0,0,.22);
   }
 
   .brand-emblem svg {
@@ -59,19 +59,19 @@
     margin: 1.1rem 0 0;
     color: inherit;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.15rem, 2.3vw, 1.5rem);
+    font-size: clamp(1.15rem,2.3vw,1.5rem);
     line-height: 1.7;
   }
 
   .visit-hero-scripture cite {
     display: block;
-    margin-top: 0.7rem;
+    margin-top: .7rem;
     color: #e8d7a7;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.78rem;
+    font-size: .78rem;
     font-style: normal;
     font-weight: bold;
-    letter-spacing: 0.12em;
+    letter-spacing: .12em;
     text-transform: uppercase;
   }
 
@@ -81,7 +81,7 @@
 
   .visit-grid {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: .9fr 1.1fr;
     gap: 2rem;
     align-items: start;
   }
@@ -91,7 +91,7 @@
     background: #ffffff;
     border: 1px solid #ddd5c3;
     border-top: 5px solid #c59a3b;
-    box-shadow: 0 12px 28px rgba(15, 32, 69, 0.09);
+    box-shadow: 0 12px 28px rgba(15,32,69,.09);
   }
 
   .visit-panel h2 {
@@ -130,7 +130,7 @@
 
   .contact-item strong {
     display: block;
-    margin-bottom: 0.3rem;
+    margin-bottom: .3rem;
     color: #0f2045;
     font-size: 1.05rem;
   }
@@ -156,7 +156,7 @@
   }
 
   .schedule-panel h2 {
-    margin: 0 0 0.5rem;
+    margin: 0 0 .5rem;
     color: #0f2045;
     font-size: 2rem;
   }
@@ -180,7 +180,7 @@
   }
 
   .service-row h3 {
-    margin: 0 0 0.3rem;
+    margin: 0 0 .3rem;
     color: #0f2045;
     font-size: 1.3rem;
   }
@@ -188,7 +188,7 @@
   .service-row p {
     margin: 0;
     color: #656c77;
-    font-size: 0.92rem;
+    font-size: .92rem;
   }
 
   .service-time {
@@ -213,24 +213,24 @@
   }
 
   .map-heading .eyebrow-text {
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
     color: #9a7424;
-    font-size: 0.8rem;
+    font-size: .8rem;
     font-weight: bold;
-    letter-spacing: 0.17em;
+    letter-spacing: .17em;
     text-transform: uppercase;
   }
 
   .map-heading h2 {
     margin: 0;
     color: #0f2045;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem,4vw,3rem);
   }
 
   .map-frame {
     overflow: hidden;
     border: 1px solid #d7cfbc;
-    box-shadow: 0 12px 30px rgba(15, 32, 69, 0.10);
+    box-shadow: 0 12px 30px rgba(15,32,69,.10);
   }
 
   .map-frame iframe {
@@ -243,8 +243,100 @@
   .map-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: .8rem;
     margin-top: 1.25rem;
+  }
+
+  /* =========================================================
+     CONTACT US
+  ========================================================= */
+
+  .contact-us-section {
+    background: #f7f3e8;
+    border-top: 1px solid #d8c79e;
+    border-bottom: 1px solid #d8c79e;
+  }
+
+  .contact-us-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem,6vw,5rem);
+    align-items: center;
+  }
+
+  .contact-us-label {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    margin-bottom: .8rem;
+    color: #9a7424;
+    font-size: .82rem;
+    font-weight: bold;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+  }
+
+  .contact-us-label::before {
+    content: "";
+    width: 42px;
+    height: 3px;
+    background: #c59a3b;
+  }
+
+  .contact-us-copy h2 {
+    margin: 0 0 .9rem;
+    color: #0f2045;
+    font-size: clamp(2.2rem,4vw,3.3rem);
+    line-height: 1.1;
+  }
+
+  .contact-us-copy p {
+    max-width: 620px;
+    margin: 0;
+    color: #535b66;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .contact-methods {
+    border-left: 1px solid #c9b98f;
+    padding-left: clamp(2rem,5vw,4rem);
+  }
+
+  .contact-method {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #d8c79e;
+  }
+
+  .contact-method:first-child {
+    padding-top: 0;
+  }
+
+  .contact-method:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .contact-method small {
+    display: block;
+    margin-bottom: .3rem;
+    color: #9a7424;
+    font-size: .72rem;
+    font-weight: bold;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .contact-method strong {
+    display: block;
+    margin-bottom: .75rem;
+    color: #0f2045;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+  }
+
+  .contact-method .btn {
+    display: inline-block;
   }
 
   /* =========================================================
@@ -252,7 +344,6 @@
   ========================================================= */
 
   .welcome-section {
-    border-top: 1px solid #d8c79e;
     background: #ffffff;
   }
 
@@ -265,7 +356,7 @@
   .welcome-inner h2 {
     margin: 0;
     color: #0f2045;
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-size: clamp(2.2rem,4vw,3.4rem);
     line-height: 1.15;
   }
 
@@ -284,8 +375,16 @@
 
   @media (max-width: 850px) {
 
-    .visit-grid {
+    .visit-grid,
+    .contact-us-inner {
       grid-template-columns: 1fr;
+    }
+
+    .contact-methods {
+      padding-top: 2rem;
+      padding-left: 0;
+      border-top: 1px solid #c9b98f;
+      border-left: 0;
     }
 
   }
@@ -294,7 +393,7 @@
 
     .service-row {
       grid-template-columns: 1fr;
-      gap: 0.6rem;
+      gap: .6rem;
     }
 
     .service-time {
@@ -349,15 +448,13 @@ Skip to main content
   stroke="#c59a3b"
   stroke-width="2"
   stroke-linecap="round"
-  opacity="0.75"
+  opacity=".75"
 >
-
 <path d="M50 5v11"/>
 <path d="M28 11l6 10"/>
 <path d="M72 11l-6 10"/>
 <path d="M12 29l11 5"/>
 <path d="M88 29l-11 5"/>
-
 </g>
 
 <path
@@ -367,15 +464,8 @@ Skip to main content
   stroke-linecap="round"
 />
 
-<path
-  d="M20 53L50 29l30 24"
-  fill="#c59a3b"
-/>
-
-<path
-  d="M27 52L50 35l23 17"
-  fill="#ffffff"
-/>
+<path d="M20 53L50 29l30 24" fill="#c59a3b"/>
+<path d="M27 52L50 35l23 17" fill="#ffffff"/>
 
 <rect
   x="27"
@@ -394,33 +484,15 @@ Skip to main content
   fill="#ffffff"
 />
 
-<path
-  d="M39 29L50 19l11 10"
-  fill="#c59a3b"
-/>
+<path d="M39 29L50 19l11 10" fill="#c59a3b"/>
 
 <path
   d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
   fill="#0f2045"
 />
 
-<rect
-  x="32"
-  y="61"
-  width="7"
-  height="11"
-  rx="3"
-  fill="#0f2045"
-/>
-
-<rect
-  x="61"
-  y="61"
-  width="7"
-  height="11"
-  rx="3"
-  fill="#0f2045"
-/>
+<rect x="32" y="61" width="7" height="11" rx="3" fill="#0f2045"/>
+<rect x="61" y="61" width="7" height="11" rx="3" fill="#0f2045"/>
 
 <path
   d="M15 87c22-7 48-7 70 0"
@@ -772,6 +844,79 @@ Get Directions
 >
 View Larger Map
 </a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT US -->
+
+<section class="section contact-us-section">
+
+<div class="container">
+
+<div class="contact-us-inner">
+
+<div class="contact-us-copy">
+
+<div class="contact-us-label">
+Contact Us
+</div>
+
+<h2>
+We Would Be Glad to Hear From You
+</h2>
+
+<p>
+If you have questions about our church, worship services, or
+visiting with us, please feel free to contact us.
+</p>
+
+</div>
+
+<div class="contact-methods">
+
+<div class="contact-method">
+
+<small>
+Email
+</small>
+
+<strong>
+icog7@outlook.com
+</strong>
+
+<a
+  class="btn btn-gold"
+  href="mailto:icog7@outlook.com"
+>
+Send Us an Email
+</a>
+
+</div>
+
+<div class="contact-method">
+
+<small>
+Telephone
+</small>
+
+<strong>
+(909) 473-0026
+</strong>
+
+<a
+  class="btn"
+  href="tel:+19094730026"
+>
+Call the Church
+</a>
+
+</div>
+
+</div>
 
 </div>
 
