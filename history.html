@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,25 +19,327 @@
   href="assets/images/church-icon.svg"
   type="image/svg+xml"
 >
+
+<style>
+
+  /* =========================================================
+     HEADER EMBLEM
+  ========================================================= */
+
+  .brand-emblem {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    place-items: center;
+    overflow: hidden;
+    border: 2px solid #c59a3b;
+    border-radius: 50%;
+    background: #0f2045;
+    box-shadow:
+      0 0 0 3px rgba(197, 154, 59, 0.18),
+      0 4px 12px rgba(0, 0, 0, 0.22);
+  }
+
+  .brand-emblem svg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand strong {
+    font-size: 1.08rem;
+  }
+
+  /* =========================================================
+     HISTORY PAGE
+  ========================================================= */
+
+  .history-photo {
+    margin: 0;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #ddd5c3;
+    box-shadow: 0 12px 28px rgba(15, 32, 69, 0.08);
+  }
+
+  .history-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .history-photo figcaption {
+    margin-top: 0.75rem;
+    color: #5f6470;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .history-label {
+    margin-bottom: 0.4rem;
+    color: #9a7424;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .history-heading {
+    margin-top: 0;
+    color: #0f2045;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  .history-copy p {
+    line-height: 1.8;
+  }
+
+  .church-name-callout {
+    margin-top: 1.5rem;
+    padding: 1.6rem;
+    background: #ffffff;
+    border-left: 5px solid #c59a3b;
+    box-shadow: 0 10px 24px rgba(15, 32, 69, 0.07);
+  }
+
+  .church-name-callout h3 {
+    margin-top: 0;
+    color: #0f2045;
+  }
+
+  .history-timeline {
+    border-top: 1px solid #d8c79e;
+  }
+
+  .history-timeline article {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #d8c79e;
+  }
+
+  .history-timeline h3 {
+    margin: 0;
+    color: #0f2045;
+    font-size: 1.35rem;
+  }
+
+  .history-timeline p {
+    margin-top: 0;
+    line-height: 1.75;
+  }
+
+  /* =========================================================
+     OUR CHURCH TODAY
+  ========================================================= */
+
+  .church-today {
+    background: #f7f3e8;
+    border-top: 1px solid #d8c79e;
+  }
+
+  .church-today-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+
+  .church-today-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.8rem;
+    color: #9a7424;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  .church-today-label::before {
+    content: "";
+    width: 42px;
+    height: 3px;
+    background: #c59a3b;
+  }
+
+  .church-today h2 {
+    margin: 0 0 1rem;
+    color: #0f2045;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+  }
+
+  .church-today p {
+    margin: 0 0 1.5rem;
+    color: #424a55;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .church-today-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top: 5px solid #c59a3b;
+    box-shadow: 0 14px 30px rgba(15, 32, 69, 0.12);
+  }
+
+  @media (max-width: 900px) {
+
+    .history-timeline article {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .church-today-layout {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  @media (max-width: 560px) {
+
+    .brand-emblem {
+      width: 50px;
+      height: 50px;
+      flex-basis: 50px;
+    }
+
+    .brand-emblem svg {
+      width: 40px;
+      height: 40px;
+    }
+
+  }
+
+</style>
 </head>
 
 <body>
 
-<a class="skip" href="#main">Skip to main content</a>
+<a class="skip" href="#main">
+Skip to main content
+</a>
 
 <header>
+
 <div class="header-inner">
 
 <a class="brand" href="index.html">
-<img src="assets/images/church-icon.svg" alt="">
+
+<div
+  class="brand-emblem"
+  role="img"
+  aria-label="Israel Church of God church emblem"
+>
+
+<svg viewBox="0 0 100 100" aria-hidden="true">
+
+<g
+  stroke="#c59a3b"
+  stroke-width="2"
+  stroke-linecap="round"
+  opacity="0.75"
+>
+
+<path d="M50 5v11"/>
+<path d="M28 11l6 10"/>
+<path d="M72 11l-6 10"/>
+<path d="M12 29l11 5"/>
+<path d="M88 29l-11 5"/>
+
+</g>
+
+<path
+  d="M50 7v18M43 14h14"
+  stroke="#c59a3b"
+  stroke-width="5"
+  stroke-linecap="round"
+/>
+
+<path
+  d="M20 53L50 29l30 24"
+  fill="#c59a3b"
+/>
+
+<path
+  d="M27 52L50 35l23 17"
+  fill="#ffffff"
+/>
+
+<rect
+  x="27"
+  y="50"
+  width="46"
+  height="35"
+  rx="1"
+  fill="#ffffff"
+/>
+
+<rect
+  x="42"
+  y="27"
+  width="16"
+  height="23"
+  fill="#ffffff"
+/>
+
+<path
+  d="M39 29L50 19l11 10"
+  fill="#c59a3b"
+/>
+
+<path
+  d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
+  fill="#0f2045"
+/>
+
+<rect
+  x="32"
+  y="61"
+  width="7"
+  height="11"
+  rx="3"
+  fill="#0f2045"
+/>
+
+<rect
+  x="61"
+  y="61"
+  width="7"
+  height="11"
+  rx="3"
+  fill="#0f2045"
+/>
+
+<path
+  d="M15 87c22-7 48-7 70 0"
+  fill="none"
+  stroke="#c59a3b"
+  stroke-width="3"
+  stroke-linecap="round"
+/>
+
+</svg>
+
+</div>
 
 <div>
-<strong>Israel Church of God</strong>
+
+<strong>
+Israel Church of God
+</strong>
 
 <span>
 SEVENTH DAY HOLINESS · EST. 1957
 </span>
+
 </div>
+
 </a>
 
 <button
@@ -48,14 +351,19 @@ Menu
 </button>
 
 <nav aria-label="Primary navigation">
+
 <ul>
 
 <li>
-<a href="index.html">Home</a>
+<a href="index.html">
+Home
+</a>
 </li>
 
 <li>
-<a href="beliefs.html">Our Beliefs</a>
+<a href="beliefs.html">
+Our Beliefs
+</a>
 </li>
 
 <li>
@@ -65,29 +373,40 @@ Our History
 </li>
 
 <li>
-<a href="ministers.html">Our Ministers</a>
+<a href="ministers.html">
+Our Ministers
+</a>
 </li>
 
 <li>
-<a href="visit.html">Visit Us</a>
+<a href="visit.html">
+Visit Us
+</a>
 </li>
 
 </ul>
+
 </nav>
 
 </div>
+
 </header>
 
 <main id="main">
 
+<!-- PAGE HERO -->
+
 <section class="page-hero">
+
 <div class="container">
 
 <div class="eyebrow">
 A Legacy of Prayer, Sabbath Worship, and Holiness
 </div>
 
-<h1>Our History</h1>
+<h1>
+Our History
+</h1>
 
 <p>
 From its beginning as an in-home prayer gathering, Israel Church
@@ -96,56 +415,37 @@ serving generations of worshippers in San Bernardino.
 </p>
 
 </div>
+
 </section>
 
+<!-- THE BEGINNING -->
+
 <section class="section">
+
 <div class="container">
 
 <div class="split">
 
-<figure
-  style="
-    margin: 0;
-    background: white;
-    border: 1px solid #ddd5c3;
-    padding: 1rem;
-  "
->
+<figure class="history-photo">
+
 <img
   src="assets/images/bro-sis-allen1.jpg"
   alt="Bro. Samuel J. Allen and his wife"
-  style="width: 100%; height: auto;"
 >
 
-<figcaption
-  style="
-    text-align: center;
-    margin-top: 0.75rem;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-style: italic;
-    color: #5f6470;
-  "
->
+<figcaption>
 Bro. Samuel J. Allen and his wife
 </figcaption>
+
 </figure>
 
-<div>
+<div class="history-copy">
 
-<div
-  class="eyebrow"
-  style="color: #9a7424;"
->
+<div class="history-label">
 The Beginning
 </div>
 
-<h2
-  style="
-    color: #0f2045;
-    font-size: 2.5rem;
-    margin-top: 0.35rem;
-  "
->
+<h2 class="history-heading">
 Prayer Begins in the Allen Home
 </h2>
 
@@ -181,32 +481,27 @@ Ghost.
 </div>
 
 </div>
+
 </section>
+
+<!-- FROM PRAYER BAND TO CHURCH -->
 
 <section
   class="section"
-  style="background: #f7f3e8;"
+  style="background:#f7f3e8;"
 >
+
 <div class="container">
 
 <div class="split">
 
-<div>
+<div class="history-copy">
 
-<div
-  class="eyebrow"
-  style="color: #9a7424;"
->
+<div class="history-label">
 1957–1959
 </div>
 
-<h2
-  style="
-    color: #0f2045;
-    font-size: 2.5rem;
-    margin-top: 0.35rem;
-  "
->
+<h2 class="history-heading">
 From Prayer Band to Church
 </h2>
 
@@ -234,14 +529,17 @@ of the “Saturday Night Prayer Band.”
 <p>
 In April 1957, the group was commanded by God to keep the
 seventh-day Sabbath holy. Sabbath mornings were soon devoted to
-Bible study and prayer, beginning with the Allen family. An elder
-came by and united with the family, and before long, others joined
-the Saturday morning prayer and Bible study.
+Bible study and prayer, beginning with the Allen family.
 </p>
 
 <p>
-In a short time, a worship service followed Sabbath School, with
-the Allen family’s living room serving as the sanctuary.
+An elder came by and united with the family, and before long,
+others joined the Saturday morning prayer and Bible study.
+</p>
+
+<p>
+In a short time, a worship service followed Sabbath School,
+with the Allen family’s living room serving as the sanctuary.
 </p>
 
 <p>
@@ -249,71 +547,49 @@ In 1959, the prayer group was established as a church, and God
 commanded that its name be:
 </p>
 
-<div
-  class="card"
-  style="
-    border-left: 5px solid #c59a3b;
-    margin-top: 1.5rem;
-  "
->
-<h3
-  style="
-    color: #0f2045;
-    margin-top: 0;
-  "
->
+<div class="church-name-callout">
+
+<h3>
 Israel Church of God
 </h3>
 
-<p style="margin-bottom: 0;">
+<p style="margin-bottom:0;">
 With the doctrine:
 <strong>“After the manner of Jesus Christ.”</strong>
 </p>
-</div>
 
 </div>
 
-<figure
-  style="
-    margin: 0;
-    background: white;
-    border: 1px solid #ddd5c3;
-    padding: 1rem;
-  "
->
+</div>
+
+<figure class="history-photo">
+
 <img
   src="assets/images/allen-family.jpg"
-  alt="Members of the Allen family"
-  style="width: 100%; height: auto;"
+  alt="Members and descendants of the Allen family"
 >
 
-<figcaption
-  style="
-    text-align: center;
-    margin-top: 0.75rem;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-style: italic;
-    color: #5f6470;
-  "
->
+<figcaption>
 Members and descendants of the Allen family
 </figcaption>
+
 </figure>
 
 </div>
 
 </div>
+
 </section>
 
+<!-- GROWTH AND DEVELOPMENT -->
+
 <section class="section">
+
 <div class="container">
 
 <div class="section-head">
 
-<div
-  class="eyebrow"
-  style="color: #9a7424;"
->
+<div class="history-label">
 Growth and Development
 </div>
 
@@ -323,11 +599,15 @@ A Permanent Home and Expanding Ministry
 
 </div>
 
-<div class="timeline">
+<div class="history-timeline">
 
 <article>
 
-<h3>1963 · The First Church Building</h3>
+<h3>
+1963 · The First Church Building
+</h3>
+
+<div>
 
 <p>
 In 1963, the church obtained a building—an old courthouse—which
@@ -341,11 +621,17 @@ The congregation moved from the Allen home to its new location
 at 263 East Dumas Street in San Bernardino.
 </p>
 
+</div>
+
 </article>
 
 <article>
 
-<h3>1967 · Friday Evening Prayer</h3>
+<h3>
+1967 · Friday Evening Prayer
+</h3>
+
+<div>
 
 <p>
 In 1967, the church was led to pray on Friday evenings for the
@@ -357,11 +643,17 @@ There was also a Monday night prayer service, which eventually
 developed into Monday night prayer and Bible study.
 </p>
 
+</div>
+
 </article>
 
 <article>
 
-<h3>Noon Day Prayer</h3>
+<h3>
+Noon Day Prayer
+</h3>
+
+<div>
 
 <p>
 At one point, faithful members began gathering at the church on
@@ -369,159 +661,133 @@ Tuesdays and Thursdays for prayer. These gatherings became known
 as “Noon Day Prayer.”
 </p>
 
+</div>
+
 </article>
 
 <article>
 
-<h3>1996 · The Founder Is Called Home</h3>
+<h3>
+1996 · The Founder Is Called Home
+</h3>
+
+<div>
 
 <p>
 Bro. Samuel J. Allen was called home in 1996, but the church
 continued and prospered under the direction of the Holy Spirit.
 </p>
 
+</div>
+
 </article>
 
 <article>
 
-<h3>1998 · The Present Property Is Purchased</h3>
+<h3>
+1998 · The Present Property Is Purchased
+</h3>
+
+<div>
 
 <p>
 The current property, formerly known as the Old Bank of America
 building, was purchased in 1998.
 </p>
 
+</div>
+
 </article>
 
 <article>
 
-<h3>2004 · Renovations Are Completed</h3>
+<h3>
+2004 · Renovations Are Completed
+</h3>
+
+<div>
 
 <p>
 The final renovations to the former bank building were completed
 in February 2004.
 </p>
 
+</div>
+
 </article>
 
 </div>
 
 </div>
+
 </section>
 
-<section
-  class="section"
-  style="background: #f7f3e8;"
->
+<!-- OUR CHURCH TODAY -->
+
+<section class="section church-today">
+
 <div class="container">
 
-<div
-  class="card"
-  style="
-    border-top: 5px solid #c59a3b;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2.25rem;
-  "
->
-
-<div
-  class="eyebrow"
-  style="color: #9a7424;"
->
-Today
-</div>
-
-<h2
-  style="
-    color: #0f2045;
-    font-size: 2.4rem;
-    margin: 0.5rem 0 1rem;
-  "
->
-Continuing the Mission
-</h2>
-
-<p style="font-size: 1.1rem;">
-Under the pastoral leadership of
-<strong>Kenneth O. Olive</strong>, the church continues its
-mission at 1650 North Mount Vernon in San Bernardino.
-</p>
-
-<p>
-The church continues under the direction of the Holy Spirit,
-holding fast to its foundation of prayer, Sabbath worship,
-biblical truth, and holiness.
-</p>
-
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="container">
-
-<div class="split">
+<div class="church-today-layout">
 
 <div>
 
-<div
-  class="eyebrow"
-  style="color: #9a7424;"
->
+<div class="church-today-label">
 Our Church Today
 </div>
 
-<h2
-  style="
-    color: #0f2045;
-    font-size: 2.5rem;
-    margin-top: 0.35rem;
-  "
->
+<h2>
 A Visible Gathering Place
 </h2>
 
 <p>
-The present church property remains a visible gathering place
-for worship, study, prayer, and fellowship.
+Under the pastoral leadership of
+<strong>Kenneth O. Olive</strong>, the present church property
+remains a visible gathering place for worship, study, prayer,
+and fellowship.
 </p>
 
 <p>
 From its beginnings in the Allen family’s living room to its
 present home on North Mount Vernon, Israel Church of God
-continues to welcome those seeking God through sincere worship,
-obedience, prayer, and holy living.
+continues under the direction of the Holy Spirit.
 </p>
 
 <a
   class="btn btn-gold"
   href="visit.html"
 >
-Plan Your Visit
+View Our Location
 </a>
 
 </div>
 
+<div class="church-today-image">
+
 <img
   src="assets/images/church-wide.jpg"
-  alt="The present Israel Church of God property in San Bernardino"
+  alt="Present Israel Church of God property in San Bernardino"
 >
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 </main>
 
 <footer>
+
 <div class="footer-grid">
 
 <div>
-<h3>Israel Church of God</h3>
+
+<h3>
+Israel Church of God
+</h3>
 
 <p>
 Seventh Day Holiness<br>
@@ -532,10 +798,14 @@ Established 1957
 “Fear God, and keep his commandments: for this is the whole
 duty of man.” — Ecclesiastes 12:13
 </p>
+
 </div>
 
 <div>
-<h3>Contact</h3>
+
+<h3>
+Contact
+</h3>
 
 <p>
 1650 North Mount Vernon<br>
@@ -543,19 +813,36 @@ San Bernardino, CA 92411
 </p>
 
 <p>
+
 <a href="tel:+19094730026">
 (909) 473-0026
 </a>
+
 <br>
 
 <a href="mailto:icog7@outlook.com">
 icog7@outlook.com
 </a>
+
+<br>
+
+<a
+  href="https://icog7dayholiness.com"
+  target="_blank"
+  rel="noopener"
+>
+icog7dayholiness.com
+</a>
+
 </p>
+
 </div>
 
 <div>
-<h3>Services</h3>
+
+<h3>
+Services
+</h3>
 
 <p>
 Friday Night Prayer<br>
@@ -567,6 +854,7 @@ Friday Night Prayer<br>
 Saturday Sabbath School · 10 a.m.<br>
 Saturday General Service · 12 p.m.
 </p>
+
 </div>
 
 </div>
@@ -575,6 +863,7 @@ Saturday General Service · 12 p.m.
 © <span data-year></span>
 Israel Church of God, Seventh Day Holiness.
 </div>
+
 </footer>
 
 <script src="assets/script.js"></script>
