@@ -37,8 +37,8 @@
     border-radius: 50%;
     background: #0f2045;
     box-shadow:
-      0 0 0 3px rgba(197, 154, 59, 0.18),
-      0 4px 12px rgba(0, 0, 0, 0.22);
+      0 0 0 3px rgba(197,154,59,.18),
+      0 4px 12px rgba(0,0,0,.22);
   }
 
   .brand-emblem svg {
@@ -57,13 +57,13 @@
   .hero-church-name {
     display: inline-block;
     margin-bottom: 1.15rem;
-    padding: 0.6rem 1rem;
+    padding: .6rem 1rem;
     border-left: 4px solid #c59a3b;
-    background: rgba(15, 32, 69, 0.78);
+    background: rgba(15,32,69,.78);
     color: #f1dfaa;
-    font-size: clamp(0.9rem, 2vw, 1.08rem);
+    font-size: clamp(.9rem,2vw,1.08rem);
     font-weight: bold;
-    letter-spacing: 0.14em;
+    letter-spacing: .14em;
     text-transform: uppercase;
   }
 
@@ -72,177 +72,173 @@
     margin: 1.3rem 0 0;
     color: #ffffff;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.08rem, 2.3vw, 1.45rem);
+    font-size: clamp(1.08rem,2.3vw,1.45rem);
     line-height: 1.75;
   }
 
   .hero-scripture cite {
     display: block;
-    margin-top: 0.8rem;
+    margin-top: .8rem;
     color: #e8d7a7;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
+    font-size: .8rem;
     font-style: normal;
     font-weight: bold;
-    letter-spacing: 0.12em;
+    letter-spacing: .12em;
     text-transform: uppercase;
   }
 
   /* =========================================================
-     FOUNDATION
+     FOUNDATION — SIMPLE READING FLOW
   ========================================================= */
 
   .foundation-section {
-    position: relative;
-    overflow: hidden;
     background: #fffdf8;
   }
 
-  .foundation-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -180px;
-    width: 520px;
-    height: 520px;
-    border: 1px solid rgba(197, 154, 59, 0.16);
-    border-radius: 50%;
+  .foundation-inner {
+    max-width: 980px;
+    margin: 0 auto;
   }
 
-  .foundation-section::after {
-    content: "";
-    position: absolute;
-    top: 85px;
-    right: -95px;
-    width: 340px;
-    height: 340px;
-    border: 1px solid rgba(15, 32, 69, 0.08);
-    border-radius: 50%;
-  }
-
-  .foundation-layout {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: clamp(2.5rem, 6vw, 6rem);
-    align-items: start;
-  }
-
-  .foundation-introduction {
-    position: sticky;
-    top: 110px;
+  .foundation-header {
+    max-width: 820px;
+    margin-bottom: 3rem;
   }
 
   .foundation-label {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.4rem;
+    gap: .75rem;
+    margin-bottom: 1rem;
     color: #9a7424;
-    font-size: 0.85rem;
+    font-size: .82rem;
     font-weight: bold;
-    letter-spacing: 0.2em;
+    letter-spacing: .18em;
     text-transform: uppercase;
   }
 
   .foundation-label::before {
     content: "";
-    width: 46px;
+    width: 44px;
     height: 3px;
     background: #c59a3b;
   }
 
-  .foundation-introduction h2 {
-    max-width: 500px;
-    margin: 0 0 1.4rem;
+  .foundation-header h2 {
+    max-width: 800px;
+    margin: 0 0 1.25rem;
     color: #0f2045;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 1.06;
+    font-size: clamp(2.6rem,5vw,4.4rem);
+    line-height: 1.08;
   }
 
   .foundation-greeting {
-    max-width: 480px;
+    max-width: 720px;
     margin: 0;
     color: #6a5330;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
-    line-height: 1.6;
+    font-size: clamp(1.2rem,2.2vw,1.5rem);
+    line-height: 1.65;
   }
 
-  .foundation-story {
-    padding-left: clamp(1.5rem, 4vw, 4rem);
-    border-left: 1px solid #d8c79e;
+  .foundation-divider {
+    height: 1px;
+    margin: 0 0 3rem;
+    background: #d8c79e;
+  }
+
+  .foundation-content {
+    max-width: 820px;
+  }
+
+  .foundation-step {
+    margin-bottom: 3rem;
   }
 
   .foundation-date {
     display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    margin-bottom: 2rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: .8rem 1.2rem;
+    margin-bottom: 1rem;
   }
 
   .foundation-year {
     color: #c59a3b;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(3.5rem, 8vw, 6.8rem);
-    line-height: 0.9;
+    font-size: clamp(2.8rem,6vw,4.6rem);
+    line-height: 1;
   }
 
   .foundation-date-text {
     color: #0f2045;
-    font-size: 0.82rem;
+    font-size: .8rem;
     font-weight: bold;
-    letter-spacing: 0.16em;
-    line-height: 1.6;
+    letter-spacing: .15em;
+    line-height: 1.5;
     text-transform: uppercase;
   }
 
-  .foundation-story p {
-    margin: 0 0 1.6rem;
-    color: #343b47;
+  .foundation-step h3 {
+    margin: 0 0 1rem;
+    color: #0f2045;
+    font-size: clamp(1.55rem,3vw,2.1rem);
+  }
+
+  .foundation-step p {
+    margin: 0 0 1.25rem;
+    color: #353d48;
     font-size: 1.08rem;
     line-height: 1.9;
   }
 
-  .foundation-story strong {
+  .foundation-step strong {
     color: #0f2045;
   }
 
-  .doctrine-statement {
-    position: relative;
-    margin: 2.5rem 0;
-    padding: 2rem 0 2rem 2rem;
+  .doctrine-section {
+    margin: 3rem 0;
+    padding: 2.25rem 0 2.25rem 2rem;
     border-left: 5px solid #c59a3b;
   }
 
-  .doctrine-statement::before {
-    content: "“";
-    position: absolute;
-    top: -0.5rem;
-    left: 1rem;
-    color: rgba(197, 154, 59, 0.18);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 7rem;
-    line-height: 1;
+  .doctrine-label {
+    margin-bottom: .75rem;
+    color: #9a7424;
+    font-size: .76rem;
+    font-weight: bold;
+    letter-spacing: .17em;
+    text-transform: uppercase;
   }
 
-  .doctrine-statement p {
-    position: relative;
-    z-index: 1;
+  .doctrine-section blockquote {
+    max-width: 760px;
     margin: 0;
     color: #0f2045;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.35rem, 2.7vw, 2rem);
-    line-height: 1.55;
+    font-size: clamp(1.35rem,2.8vw,2rem);
+    line-height: 1.6;
+  }
+
+  .foundation-closing {
+    max-width: 820px;
+    padding-top: .5rem;
+  }
+
+  .foundation-closing p {
+    margin: 0 0 1.35rem;
+    color: #353d48;
+    font-size: 1.08rem;
+    line-height: 1.9;
   }
 
   .foundation-blessing {
     display: inline-block;
-    margin-top: 0.5rem;
+    margin-top: .5rem;
     color: #9a7424;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.35rem;
+    font-size: 1.4rem;
     font-weight: bold;
   }
 
@@ -257,20 +253,20 @@
 
   .visit-layout {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: clamp(2rem, 6vw, 5rem);
+    grid-template-columns: 1.15fr .85fr;
+    gap: clamp(2rem,6vw,5rem);
     align-items: center;
   }
 
   .visit-label {
     display: inline-flex;
     align-items: center;
-    gap: 0.7rem;
+    gap: .7rem;
     margin-bottom: 1rem;
     color: #9a7424;
-    font-size: 0.84rem;
+    font-size: .84rem;
     font-weight: bold;
-    letter-spacing: 0.18em;
+    letter-spacing: .18em;
     text-transform: uppercase;
   }
 
@@ -285,7 +281,7 @@
     max-width: 700px;
     margin: 0;
     color: #0f2045;
-    font-size: clamp(2.7rem, 5vw, 4.8rem);
+    font-size: clamp(2.7rem,5vw,4.8rem);
     line-height: 1.06;
   }
 
@@ -296,7 +292,7 @@
 
   .visit-details strong {
     display: block;
-    margin-bottom: 0.55rem;
+    margin-bottom: .55rem;
     color: #0f2045;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.45rem;
@@ -309,28 +305,14 @@
     line-height: 1.7;
   }
 
-  .visit-details .btn {
-    margin-top: 0.25rem;
-  }
-
   /* =========================================================
      RESPONSIVE
   ========================================================= */
 
   @media (max-width: 900px) {
 
-    .foundation-layout,
     .visit-layout {
       grid-template-columns: 1fr;
-    }
-
-    .foundation-introduction {
-      position: static;
-    }
-
-    .foundation-story {
-      padding-left: 0;
-      border-left: 0;
     }
 
     .visit-details {
@@ -356,18 +338,18 @@
     }
 
     .hero-church-name {
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
 
-    .foundation-date {
-      align-items: flex-start;
+    .foundation-divider {
+      margin-bottom: 2.25rem;
     }
 
-    .foundation-year {
-      font-size: 4rem;
+    .foundation-step {
+      margin-bottom: 2.5rem;
     }
 
-    .doctrine-statement {
+    .doctrine-section {
       padding-left: 1.25rem;
     }
 
@@ -400,7 +382,7 @@ Skip to main content
   stroke="#c59a3b"
   stroke-width="2"
   stroke-linecap="round"
-  opacity="0.75"
+  opacity=".75"
 >
 
 <path d="M50 5v11"/>
@@ -418,15 +400,8 @@ Skip to main content
   stroke-linecap="round"
 />
 
-<path
-  d="M20 53L50 29l30 24"
-  fill="#c59a3b"
-/>
-
-<path
-  d="M27 52L50 35l23 17"
-  fill="#ffffff"
-/>
+<path d="M20 53L50 29l30 24" fill="#c59a3b"/>
+<path d="M27 52L50 35l23 17" fill="#ffffff"/>
 
 <rect
   x="27"
@@ -445,33 +420,15 @@ Skip to main content
   fill="#ffffff"
 />
 
-<path
-  d="M39 29L50 19l11 10"
-  fill="#c59a3b"
-/>
+<path d="M39 29L50 19l11 10" fill="#c59a3b"/>
 
 <path
   d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
   fill="#0f2045"
 />
 
-<rect
-  x="32"
-  y="61"
-  width="7"
-  height="11"
-  rx="3"
-  fill="#0f2045"
-/>
-
-<rect
-  x="61"
-  y="61"
-  width="7"
-  height="11"
-  rx="3"
-  fill="#0f2045"
-/>
+<rect x="32" y="61" width="7" height="11" rx="3" fill="#0f2045"/>
+<rect x="61" y="61" width="7" height="11" rx="3" fill="#0f2045"/>
 
 <path
   d="M15 87c22-7 48-7 70 0"
@@ -600,9 +557,9 @@ Explore Our Beliefs
 
 <div class="container">
 
-<div class="foundation-layout">
+<div class="foundation-inner">
 
-<div class="foundation-introduction">
+<div class="foundation-header">
 
 <div class="foundation-label">
 Our Foundation
@@ -619,7 +576,11 @@ commandments.
 
 </div>
 
-<div class="foundation-story">
+<div class="foundation-divider"></div>
+
+<div class="foundation-content">
+
+<div class="foundation-step">
 
 <div class="foundation-date">
 
@@ -629,10 +590,14 @@ commandments.
 
 <div class="foundation-date-text">
 April · Abib<br>
-The Church Receives Its Charge
+The Beginning
 </div>
 
 </div>
+
+<h3>
+The Church Receives Its Charge
+</h3>
 
 <p>
 In April (Abib) 1957, we, the Israel Church of God, were chosen
@@ -646,14 +611,22 @@ June 14, 1996.
 We are not affiliated with any organization.
 </p>
 
-<div class="doctrine-statement">
+</div>
 
-<p>
+<div class="doctrine-section">
+
+<div class="doctrine-label">
+Our Doctrine
+</div>
+
+<blockquote>
 The Church’s doctrine is after the manner of Jesus Christ; no
 other doctrine shall we know, so says the Holy Spirit.
-</p>
+</blockquote>
 
 </div>
+
+<div class="foundation-closing">
 
 <p>
 We also know that the Church of God is taught and led by the
@@ -669,6 +642,8 @@ Sabbath evening and Sabbath day services.
 <span class="foundation-blessing">
 May God richly bless you.
 </span>
+
+</div>
 
 </div>
 
@@ -708,7 +683,10 @@ Pastor Kenneth O. Olive
 We look forward to welcoming you and your family.
 </p>
 
-<a class="btn btn-gold" href="visit.html">
+<a
+  class="btn btn-gold"
+  href="visit.html"
+>
 View Our Location
 </a>
 
