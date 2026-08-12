@@ -51,81 +51,105 @@
   }
 
   /* =========================================================
-     HERO
+     HERO — FULL WIDTH / ENTIRE PHOTO VISIBLE
   ========================================================= */
+
+  .home-hero {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #0f2045;
+  }
+
+  .home-hero-image {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(6,18,43,.86) 0%,
+        rgba(6,18,43,.70) 35%,
+        rgba(6,18,43,.42) 65%,
+        rgba(6,18,43,.18) 100%
+      );
+    pointer-events: none;
+  }
+
+  .home-hero-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: min(1180px, calc(100% - 4rem));
+    transform: translate(-50%, -50%);
+  }
 
   .hero-church-name {
     display: inline-block;
     margin-bottom: 1.15rem;
     padding: .6rem 1rem;
     border-left: 4px solid #c59a3b;
-    background: rgba(15,32,69,.78);
+    background: rgba(15,32,69,.80);
     color: #f1dfaa;
-    font-size: clamp(.9rem,2vw,1.08rem);
+    font-size: clamp(.82rem,1.25vw,1.08rem);
     font-weight: bold;
     letter-spacing: .14em;
     text-transform: uppercase;
   }
 
+  .home-hero h1 {
+    max-width: 850px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2.4rem,4.5vw,5rem);
+    line-height: 1.04;
+    text-shadow: 0 2px 10px rgba(0,0,0,.35);
+  }
+
   .hero-scripture {
     max-width: 790px;
-    margin: 1.3rem 0 0;
+    margin: 1.25rem 0 0;
     color: #ffffff;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.08rem,2.3vw,1.45rem);
-    line-height: 1.75;
+    font-size: clamp(1rem,1.45vw,1.4rem);
+    line-height: 1.65;
+    text-shadow: 0 2px 8px rgba(0,0,0,.32);
   }
 
   .hero-scripture cite {
     display: block;
-    margin-top: .8rem;
+    margin-top: .7rem;
     color: #e8d7a7;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: .8rem;
+    font-size: .78rem;
     font-style: normal;
     font-weight: bold;
     letter-spacing: .12em;
     text-transform: uppercase;
   }
 
-  /* =========================================================
-     STABILIZE HOME BANNER IMAGE
-  ========================================================= */
-
-  /*
-     The main stylesheet may use background-size: cover.
-     That causes the church photograph to appear to zoom
-     in and out as the browser window changes shape.
-
-     These rules keep the image at a more consistent scale.
-  */
-
-  .hero {
-    min-height: 560px;
-    background-size: 1600px auto !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-
-  .hero-inner {
-    min-height: 560px;
+  .home-hero .actions {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  /* Extra-wide desktop screens */
-
-  @media (min-width: 1600px) {
-
-    .hero {
-      background-size: 1800px auto !important;
-    }
-
+    flex-wrap: wrap;
+    gap: .8rem;
+    margin-top: 1.4rem;
   }
 
   /* =========================================================
-     FOUNDATION — SIMPLE READING FLOW
+     FOUNDATION
   ========================================================= */
 
   .foundation-section {
@@ -347,13 +371,18 @@
 
   @media (max-width: 900px) {
 
-    .hero {
-      min-height: 520px;
-      background-size: 1450px auto !important;
+    .home-hero-content {
+      width: calc(100% - 3rem);
     }
 
-    .hero-inner {
-      min-height: 520px;
+    .home-hero h1 {
+      font-size: clamp(2rem,5vw,3.4rem);
+    }
+
+    .hero-scripture {
+      max-width: 650px;
+      font-size: clamp(.92rem,1.8vw,1.15rem);
+      line-height: 1.5;
     }
 
     .visit-layout {
@@ -369,6 +398,37 @@
 
   }
 
+  @media (max-width: 650px) {
+
+    .home-hero::after {
+      display: none;
+    }
+
+    .home-hero-content {
+      position: static;
+      width: 100%;
+      transform: none;
+      padding: 2rem 1.5rem 2.5rem;
+      background: #0f2045;
+    }
+
+    .home-hero h1 {
+      font-size: clamp(2.2rem,9vw,3.1rem);
+    }
+
+    .hero-scripture {
+      max-width: none;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .hero-church-name {
+      font-size: .76rem;
+      letter-spacing: .08em;
+    }
+
+  }
+
   @media (max-width: 560px) {
 
     .brand-emblem {
@@ -380,20 +440,6 @@
     .brand-emblem svg {
       width: 40px;
       height: 40px;
-    }
-
-    .hero {
-      min-height: 520px;
-      background-size: auto 100% !important;
-      background-position: center center !important;
-    }
-
-    .hero-inner {
-      min-height: 520px;
-    }
-
-    .hero-church-name {
-      letter-spacing: .08em;
     }
 
     .foundation-divider {
@@ -455,15 +501,8 @@ Skip to main content
   stroke-linecap="round"
 />
 
-<path
-  d="M20 53L50 29l30 24"
-  fill="#c59a3b"
-/>
-
-<path
-  d="M27 52L50 35l23 17"
-  fill="#ffffff"
-/>
+<path d="M20 53L50 29l30 24" fill="#c59a3b"/>
+<path d="M27 52L50 35l23 17" fill="#ffffff"/>
 
 <rect
   x="27"
@@ -482,10 +521,7 @@ Skip to main content
   fill="#ffffff"
 />
 
-<path
-  d="M39 29L50 19l11 10"
-  fill="#c59a3b"
-/>
+<path d="M39 29L50 19l11 10" fill="#c59a3b"/>
 
 <path
   d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
@@ -595,9 +631,15 @@ Visit Us
      HERO
 ======================================================= -->
 
-<section class="hero">
+<section class="home-hero">
 
-<div class="hero-inner">
+<img
+  class="home-hero-image"
+  src="assets/images/church-wide.jpg"
+  alt="Israel Church of God in San Bernardino"
+>
+
+<div class="home-hero-content">
 
 <div class="hero-church-name">
 Israel Church of God · Seventh Day Holiness
