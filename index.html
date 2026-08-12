@@ -52,7 +52,6 @@
 
   /* =========================================================
      HOME HERO
-     Uses the ORIGINAL .hero background image from styles.css
   ========================================================= */
 
   .hero.home-hero {
@@ -63,22 +62,16 @@
     padding: 0 !important;
     overflow: hidden;
 
-    /*
-      Keeps the banner full width while maintaining
-      a normal banner height.
-    */
     background-size: cover !important;
 
     /*
-      Moves the crop LOWER so more of the lower church,
-      parking area and church sign remain visible.
+       Higher crop so more of the church sign
+       and upper portion of the photograph remain visible.
     */
-    background-position: center 72% !important;
+    background-position: center 52% !important;
 
     background-repeat: no-repeat !important;
   }
-
-  /* Dark left-to-right overlay */
 
   .hero.home-hero::before {
     content: "";
@@ -387,7 +380,7 @@
     .hero.home-hero {
       height: 410px;
       min-height: 410px;
-      background-position: center 70% !important;
+      background-position: center 50% !important;
     }
 
     .home-hero .hero-inner {
@@ -428,10 +421,10 @@
       min-height: 400px;
 
       /*
-        Favors the left side slightly on narrower screens
-        so the church sign is less likely to be cropped away.
+         Keep left side favored for the sign,
+         while moving the crop higher vertically.
       */
-      background-position: 38% 68% !important;
+      background-position: 38% 48% !important;
     }
 
     .home-hero .hero-inner {
@@ -482,7 +475,11 @@
     .hero.home-hero {
       height: 390px;
       min-height: 390px;
-      background-position: 32% 66% !important;
+
+      /*
+         Left-biased and higher crop to preserve the sign.
+      */
+      background-position: 32% 45% !important;
     }
 
     .home-hero .hero-inner {
@@ -682,14 +679,7 @@ Visit Us
 
 <main id="main">
 
-<!-- =======================================================
-     HERO
-
-     IMPORTANT:
-     There is intentionally NO image filename here.
-     The original church/sign photograph already assigned
-     to .hero in assets/styles.css is being used.
-======================================================= -->
+<!-- HERO -->
 
 <section class="hero home-hero">
 
@@ -738,9 +728,7 @@ Explore Our Beliefs
 
 </section>
 
-<!-- =======================================================
-     OUR FOUNDATION
-======================================================= -->
+<!-- OUR FOUNDATION -->
 
 <section class="section foundation-section">
 
@@ -842,9 +830,7 @@ May God richly bless you.
 
 </section>
 
-<!-- =======================================================
-     COME WORSHIP WITH US
-======================================================= -->
+<!-- COME WORSHIP WITH US -->
 
 <section class="section visit-section">
 
