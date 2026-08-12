@@ -64,13 +64,6 @@
     background: #0f2045;
   }
 
-  /*
-     The photo fills the full-width 430px banner.
-
-     object-fit: cover keeps the image proportional.
-     object-position keeps the church centered in the crop.
-  */
-
   .home-hero-image {
     position: absolute;
     inset: 0;
@@ -81,13 +74,14 @@
     margin: 0;
     padding: 0;
     object-fit: cover;
-    object-position: center 48%;
-  }
 
-  /*
-     Overlay keeps the wording readable while still
-     allowing the church photograph to remain visible.
-  */
+    /*
+       Pushes the photograph DOWN within the banner
+       so more of the church, parking area and sign
+       remain visible.
+    */
+    object-position: center 68%;
+  }
 
   .home-hero::after {
     content: "";
@@ -97,10 +91,10 @@
     background:
       linear-gradient(
         90deg,
-        rgba(6,18,43,.87) 0%,
-        rgba(6,18,43,.72) 36%,
-        rgba(6,18,43,.43) 66%,
-        rgba(6,18,43,.18) 100%
+        rgba(6,18,43,.86) 0%,
+        rgba(6,18,43,.70) 35%,
+        rgba(6,18,43,.42) 65%,
+        rgba(6,18,43,.15) 100%
       );
     pointer-events: none;
   }
@@ -395,6 +389,10 @@
       height: 410px;
     }
 
+    .home-hero-image {
+      object-position: center 65%;
+    }
+
     .home-hero-content {
       width: calc(100% - 3rem);
     }
@@ -433,7 +431,7 @@
     }
 
     .home-hero-image {
-      object-position: center 50%;
+      object-position: center 65%;
     }
 
     .home-hero-content {
@@ -485,13 +483,17 @@
       height: 430px;
     }
 
+    .home-hero-image {
+      object-position: center 62%;
+    }
+
     .home-hero::after {
       background:
         linear-gradient(
           90deg,
           rgba(6,18,43,.88) 0%,
           rgba(6,18,43,.68) 60%,
-          rgba(6,18,43,.36) 100%
+          rgba(6,18,43,.34) 100%
         );
     }
 
@@ -566,15 +568,8 @@ Skip to main content
   stroke-linecap="round"
 />
 
-<path
-  d="M20 53L50 29l30 24"
-  fill="#c59a3b"
-/>
-
-<path
-  d="M27 52L50 35l23 17"
-  fill="#ffffff"
-/>
+<path d="M20 53L50 29l30 24" fill="#c59a3b"/>
+<path d="M27 52L50 35l23 17" fill="#ffffff"/>
 
 <rect
   x="27"
@@ -593,10 +588,7 @@ Skip to main content
   fill="#ffffff"
 />
 
-<path
-  d="M39 29L50 19l11 10"
-  fill="#c59a3b"
-/>
+<path d="M39 29L50 19l11 10" fill="#c59a3b"/>
 
 <path
   d="M43 85V68c0-5 3-8 7-8s7 3 7 8v17"
@@ -702,16 +694,14 @@ Visit Us
 
 <main id="main">
 
-<!-- =======================================================
-     HERO
-======================================================= -->
+<!-- HERO -->
 
 <section class="home-hero">
 
 <img
   class="home-hero-image"
-  src="assets/images/church-wide.jpg"
-  alt="Israel Church of God in San Bernardino"
+  src="assets/images/church-sign.jpg"
+  alt="Israel Church of God exterior and church sign"
 >
 
 <div class="home-hero-content">
@@ -759,9 +749,7 @@ Explore Our Beliefs
 
 </section>
 
-<!-- =======================================================
-     OUR FOUNDATION
-======================================================= -->
+<!-- OUR FOUNDATION -->
 
 <section class="section foundation-section">
 
@@ -863,9 +851,7 @@ May God richly bless you.
 
 </section>
 
-<!-- =======================================================
-     COME WORSHIP WITH US
-======================================================= -->
+<!-- COME WORSHIP WITH US -->
 
 <section class="section visit-section">
 
