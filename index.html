@@ -31,11 +31,6 @@
     align-items:center;
   }
 
-  /*
-     Church name is intentionally white so it remains
-     visible against the dark header.
-  */
-
   .brand strong {
     display:block;
     color:#ffffff !important;
@@ -52,61 +47,37 @@
   }
 
   /* =========================================================
-     HOME HERO
-     CLEAN CHURCH PHOTO — NO OVERLAY
+     HOME BANNER
+     Real image instead of CSS background
   ========================================================= */
 
-  .hero.home-hero {
-    position:relative;
+  .home-banner {
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background:#eef1f3;
+  }
+
+  .home-banner-image {
+    display:block;
     width:100%;
     height:430px;
-    min-height:430px;
-    margin:0;
-    padding:0 !important;
-    overflow:hidden;
+    margin:0 auto;
+    padding:0;
 
     /*
-      Keep the image full width and proportional.
+      "contain" is intentional.
+
+      It guarantees that the entire prepared banner image,
+      including the church building and church sign,
+      remains visible rather than being cropped.
     */
+    object-fit:contain;
+    object-position:center center;
 
-    background-size:cover !important;
-    background-repeat:no-repeat !important;
-
-    /*
-      Favors the upper-left/center portion of the photograph
-      so the church lettering and church sign remain visible.
-    */
-
-    background-position:38% 38% !important;
-
-    /*
-      Remove inherited visual effects.
-    */
-
-    background-blend-mode:normal !important;
-    box-shadow:none !important;
-    filter:none !important;
-    opacity:1 !important;
-  }
-
-  /*
-     Completely remove any overlay that may exist in
-     assets/styles.css.
-  */
-
-  .hero.home-hero::before,
-  .hero.home-hero::after {
-    display:none !important;
-    content:none !important;
-    opacity:0 !important;
-    background:none !important;
-    background-image:none !important;
-    box-shadow:none !important;
-    filter:none !important;
-  }
-
-  .home-hero .hero-inner {
-    display:none !important;
+    box-shadow:none;
+    filter:none;
   }
 
   /* =========================================================
@@ -393,17 +364,13 @@
   }
 
   /* =========================================================
-     RESPONSIVE BANNER POSITIONING
+     RESPONSIVE
   ========================================================= */
 
   @media(max-width:1000px) {
 
-    .hero.home-hero {
-      height:410px;
-      min-height:410px;
-
-      /* higher and slightly left */
-      background-position:36% 36% !important;
+    .home-banner-image {
+      height:400px;
     }
 
   }
@@ -425,16 +392,8 @@
 
   @media(max-width:700px) {
 
-    .hero.home-hero {
-      height:400px;
-      min-height:400px;
-
-      /*
-        Favor the left side more strongly on narrower screens
-        so the sign does not disappear off the edge.
-      */
-
-      background-position:30% 35% !important;
+    .home-banner-image {
+      height:340px;
     }
 
     .scripture-section {
@@ -455,15 +414,8 @@
       letter-spacing:.08em;
     }
 
-    .hero.home-hero {
-      height:390px;
-      min-height:390px;
-
-      /*
-        Mobile crop prioritizes the sign side of the photo.
-      */
-
-      background-position:25% 35% !important;
+    .home-banner-image {
+      height:280px;
     }
 
     .scripture-section {
@@ -574,15 +526,19 @@ Visit Us
 <main id="main">
 
 <!-- =========================================================
-     CLEAN CHURCH PHOTO
+     CHURCH BANNER
 ========================================================= -->
 
 <section
-  class="hero home-hero"
+  class="home-banner"
   aria-label="Israel Church of God"
 >
 
-<div class="hero-inner"></div>
+<img
+  class="home-banner-image"
+  src="assets/images/church-banner.png"
+  alt="Israel Church of God and church sign in San Bernardino"
+>
 
 </section>
 
