@@ -31,16 +31,21 @@
     align-items:center;
   }
 
+  /*
+     Church name is intentionally white so it remains
+     visible against the dark header.
+  */
+
   .brand strong {
     display:block;
-    color:#0f2045;
+    color:#ffffff !important;
     font-size:1.12rem;
   }
 
   .brand span {
     display:block;
     margin-top:.15rem;
-    color:#8b6a26;
+    color:#e2c675 !important;
     font-size:.7rem;
     font-weight:bold;
     letter-spacing:.12em;
@@ -48,7 +53,7 @@
 
   /* =========================================================
      HOME HERO
-     Clean church photograph only
+     CLEAN CHURCH PHOTO — NO OVERLAY
   ========================================================= */
 
   .hero.home-hero {
@@ -60,27 +65,44 @@
     padding:0 !important;
     overflow:hidden;
 
+    /*
+      Keep the image full width and proportional.
+    */
+
     background-size:cover !important;
+    background-repeat:no-repeat !important;
 
     /*
-      Keeps the photograph positioned higher so the
-      church sign remains visible.
+      Favors the upper-left/center portion of the photograph
+      so the church lettering and church sign remain visible.
     */
-    background-position:center 52% !important;
 
-    background-repeat:no-repeat !important;
+    background-position:38% 38% !important;
+
+    /*
+      Remove inherited visual effects.
+    */
+
+    background-blend-mode:normal !important;
+    box-shadow:none !important;
+    filter:none !important;
+    opacity:1 !important;
   }
 
   /*
-    Remove any overlay, gradient, shadow, or fade that
-    may be inherited from the main stylesheet.
+     Completely remove any overlay that may exist in
+     assets/styles.css.
   */
 
   .hero.home-hero::before,
   .hero.home-hero::after {
     display:none !important;
     content:none !important;
+    opacity:0 !important;
     background:none !important;
+    background-image:none !important;
+    box-shadow:none !important;
+    filter:none !important;
   }
 
   .home-hero .hero-inner {
@@ -371,7 +393,7 @@
   }
 
   /* =========================================================
-     RESPONSIVE
+     RESPONSIVE BANNER POSITIONING
   ========================================================= */
 
   @media(max-width:1000px) {
@@ -379,7 +401,9 @@
     .hero.home-hero {
       height:410px;
       min-height:410px;
-      background-position:center 50% !important;
+
+      /* higher and slightly left */
+      background-position:36% 36% !important;
     }
 
   }
@@ -404,7 +428,13 @@
     .hero.home-hero {
       height:400px;
       min-height:400px;
-      background-position:38% 48% !important;
+
+      /*
+        Favor the left side more strongly on narrower screens
+        so the sign does not disappear off the edge.
+      */
+
+      background-position:30% 35% !important;
     }
 
     .scripture-section {
@@ -417,6 +447,7 @@
 
     .brand strong {
       font-size:1rem;
+      color:#ffffff !important;
     }
 
     .brand span {
@@ -427,7 +458,12 @@
     .hero.home-hero {
       height:390px;
       min-height:390px;
-      background-position:32% 45% !important;
+
+      /*
+        Mobile crop prioritizes the sign side of the photo.
+      */
+
+      background-position:25% 35% !important;
     }
 
     .scripture-section {
@@ -538,7 +574,7 @@ Visit Us
 <main id="main">
 
 <!-- =========================================================
-     CHURCH PHOTO
+     CLEAN CHURCH PHOTO
 ========================================================= -->
 
 <section
