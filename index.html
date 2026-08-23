@@ -23,6 +23,60 @@
 <style>
 
   /* =========================================================
+     LOW-VISION ACCESSIBILITY BASE
+  ========================================================= */
+
+  /*
+    18px root size makes 1rem = 18px.
+
+    Most ordinary reading text below is set at 1.12rem,
+    which is approximately 20px.
+  */
+
+  html {
+    font-size:18px;
+  }
+
+  body {
+    font-size:1.12rem;
+    line-height:1.75;
+  }
+
+  p,
+  li {
+    line-height:1.75;
+  }
+
+  /*
+    Keep links clearly readable and easy to distinguish.
+  */
+
+  a {
+    text-underline-offset:.18em;
+  }
+
+  /*
+    Larger navigation for older users.
+  */
+
+  nav a {
+    font-size:1rem !important;
+    font-weight:700;
+  }
+
+  /*
+    Larger buttons and tap targets.
+  */
+
+  .btn {
+    min-height:48px;
+    padding:.8rem 1.25rem !important;
+    font-size:1rem !important;
+    font-weight:700;
+    line-height:1.25;
+  }
+
+  /* =========================================================
      HEADER
   ========================================================= */
 
@@ -34,16 +88,24 @@
   .brand strong {
     display:block;
     color:#ffffff !important;
-    font-size:1.12rem;
+    font-size:1.2rem;
+    line-height:1.2;
   }
 
   .brand span {
     display:block;
-    margin-top:.15rem;
+    margin-top:.2rem;
     color:#e2c675 !important;
-    font-size:.7rem;
+    font-size:.9rem;
     font-weight:bold;
-    letter-spacing:.12em;
+    letter-spacing:.08em;
+    line-height:1.4;
+  }
+
+  .menu-btn {
+    font-size:1rem !important;
+    min-height:48px;
+    padding:.65rem 1rem;
   }
 
   /* =========================================================
@@ -74,49 +136,57 @@
 
   /* =========================================================
      HOUSE OF PRAYER
-     Quiet spiritual introduction
   ========================================================= */
 
   .prayer-section {
-    padding:3.75rem 0 4rem;
+    padding:4rem 0 4.25rem;
     background:#ffffff;
-    border-bottom:1px solid #dfd7c5;
+    border-bottom:1px solid #cfc5ad;
   }
 
   .prayer-inner {
-    max-width:860px;
+    max-width:900px;
     margin:0 auto;
     text-align:center;
   }
 
- .prayer-title {
-  max-width:800px;
-  margin:0 auto 1.35rem;
-  color:#0f2045;
-  font-family:Georgia, "Times New Roman", serif;
-  font-size:clamp(2.5rem,5vw,4.15rem);
-  font-weight:bold;
-  line-height:1.08;
-}
+  /*
+    This is intentionally identical to the Foundation heading.
+  */
+
+  .prayer-title,
+  .foundation-heading h2 {
+    max-width:800px;
+    margin:0;
+    color:#0f2045;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:clamp(2.5rem,5vw,4.15rem);
+    font-weight:bold;
+    line-height:1.08;
+  }
+
+  .prayer-title {
+    margin:0 auto 1.5rem;
+  }
 
   .prayer-quote {
     max-width:790px;
     margin:0 auto;
-    color:#505661;
+    color:#343b45;
     font-family:Georgia, "Times New Roman", serif;
-    font-size:clamp(1.05rem,1.7vw,1.28rem);
+    font-size:clamp(1.12rem,1.7vw,1.4rem);
     line-height:1.8;
   }
 
   .prayer-quote cite {
     display:block;
-    margin-top:1rem;
-    color:#9a7424;
+    margin-top:1.1rem;
+    color:#85631e;
     font-family:Arial, Helvetica, sans-serif;
-    font-size:.78rem;
+    font-size:.9rem;
     font-style:normal;
-    font-weight:bold;
-    letter-spacing:.15em;
+    font-weight:800;
+    letter-spacing:.12em;
     text-transform:uppercase;
   }
 
@@ -143,11 +213,11 @@
     display:inline-flex;
     align-items:center;
     gap:.75rem;
-    margin-bottom:.9rem;
-    color:#9a7424;
-    font-size:.8rem;
-    font-weight:bold;
-    letter-spacing:.18em;
+    margin-bottom:1rem;
+    color:#85631e;
+    font-size:.9rem;
+    font-weight:800;
+    letter-spacing:.14em;
     text-transform:uppercase;
   }
 
@@ -157,16 +227,6 @@
     height:3px;
     background:#c59a3b;
   }
-
-.foundation-heading h2 {
-  max-width:800px;
-  margin:0;
-  color:#0f2045;
-  font-family:Georgia, "Times New Roman", serif;
-  font-size:clamp(2.5rem,5vw,4.15rem);
-  font-weight:bold;
-  line-height:1.08;
-}
 
   /* =========================================================
      FOUNDATION STORY
@@ -178,7 +238,7 @@
     gap:clamp(2rem,5vw,4.5rem);
     align-items:start;
     padding:0 0 3.5rem;
-    border-bottom:1px solid #d8c79e;
+    border-bottom:1px solid #cfc5ad;
   }
 
   .foundation-date {
@@ -187,7 +247,7 @@
 
   .foundation-year {
     display:block;
-    color:#c59a3b;
+    color:#ad812d;
     font-family:Georgia, "Times New Roman", serif;
     font-size:clamp(3.4rem,6vw,5rem);
     font-weight:bold;
@@ -196,11 +256,11 @@
 
   .foundation-month {
     display:block;
-    margin-top:.55rem;
+    margin-top:.65rem;
     color:#0f2045;
-    font-size:.78rem;
-    font-weight:bold;
-    letter-spacing:.15em;
+    font-size:.9rem;
+    font-weight:800;
+    letter-spacing:.12em;
     line-height:1.5;
     text-transform:uppercase;
   }
@@ -208,10 +268,11 @@
   .foundation-beginning {
     display:block;
     margin-top:1.1rem;
-    color:#9a7424;
+    color:#85631e;
     font-family:Georgia, "Times New Roman", serif;
-    font-size:1.1rem;
+    font-size:1.12rem;
     font-style:italic;
+    line-height:1.5;
   }
 
   .foundation-story-copy h3 {
@@ -222,20 +283,21 @@
   }
 
   .foundation-story-copy p {
-    max-width:730px;
-    margin:0 0 1.25rem;
-    color:#3f4650;
-    font-size:1.07rem;
-    line-height:1.9;
+    max-width:70ch;
+    margin:0 0 1.4rem;
+    color:#303741;
+    font-size:1.12rem;
+    line-height:1.8;
   }
 
   .independent-statement {
     display:inline-block;
     margin-top:.35rem;
-    padding:.55rem .85rem;
-    border-left:3px solid #c59a3b;
+    padding:.7rem 1rem;
+    border-left:4px solid #c59a3b;
     color:#0f2045 !important;
-    font-weight:bold;
+    font-size:1.08rem !important;
+    font-weight:800;
     background:#ffffff;
   }
 
@@ -246,18 +308,18 @@
   .foundation-doctrine {
     max-width:850px;
     margin:3.5rem 0;
-    padding:2rem 2.25rem;
+    padding:2.2rem 2.4rem;
     background:#ffffff;
     border-left:5px solid #c59a3b;
     box-shadow:0 8px 24px rgba(15,32,69,.06);
   }
 
   .doctrine-label {
-    margin-bottom:.7rem;
-    color:#9a7424;
-    font-size:.76rem;
-    font-weight:bold;
-    letter-spacing:.17em;
+    margin-bottom:.8rem;
+    color:#85631e;
+    font-size:.9rem;
+    font-weight:800;
+    letter-spacing:.14em;
     text-transform:uppercase;
   }
 
@@ -265,8 +327,8 @@
     margin:0;
     color:#0f2045;
     font-family:Georgia, "Times New Roman", serif;
-    font-size:clamp(1.3rem,2.6vw,1.85rem);
-    line-height:1.6;
+    font-size:clamp(1.35rem,2.6vw,1.9rem);
+    line-height:1.65;
   }
 
   /* =========================================================
@@ -278,32 +340,33 @@
   }
 
   .foundation-closing p {
-    margin:0 0 1.3rem;
-    color:#3f4650;
-    font-size:1.07rem;
-    line-height:1.9;
+    max-width:70ch;
+    margin:0 0 1.45rem;
+    color:#303741;
+    font-size:1.12rem;
+    line-height:1.8;
   }
 
   .foundation-greeting {
     margin-top:2rem !important;
-    color:#6a5330 !important;
+    color:#594420 !important;
     font-family:Georgia, "Times New Roman", serif;
-    font-size:1.25rem !important;
+    font-size:1.3rem !important;
     line-height:1.7 !important;
   }
 
   .foundation-blessing {
     display:inline-block;
-    margin-top:.3rem;
-    color:#9a7424;
+    margin-top:.4rem;
+    color:#85631e;
     font-family:Georgia, "Times New Roman", serif;
-    font-size:1.35rem;
+    font-size:1.4rem;
     font-weight:bold;
   }
 
   /* =========================================================
      COME WORSHIP WITH US
-     DO NOT ALTER
+     CONTENT AND LAYOUT RETAINED
   ========================================================= */
 
   .visit-section {
@@ -323,10 +386,10 @@
     align-items:center;
     gap:.7rem;
     margin-bottom:1rem;
-    color:#9a7424;
-    font-size:.84rem;
-    font-weight:bold;
-    letter-spacing:.18em;
+    color:#85631e;
+    font-size:.9rem;
+    font-weight:800;
+    letter-spacing:.14em;
     text-transform:uppercase;
   }
 
@@ -347,22 +410,54 @@
 
   .visit-details {
     padding-left:2.5rem;
-    border-left:1px solid #d8c79e;
+    border-left:1px solid #cfc5ad;
   }
 
   .visit-details strong {
     display:block;
-    margin-bottom:.55rem;
+    margin-bottom:.65rem;
     color:#0f2045;
     font-family:Georgia, "Times New Roman", serif;
-    font-size:1.45rem;
+    font-size:1.5rem;
+    line-height:1.35;
   }
 
   .visit-details p {
     margin:0 0 1.5rem;
-    color:#4c5460;
-    font-size:1.05rem;
+    color:#303741;
+    font-size:1.12rem;
+    line-height:1.75;
+  }
+
+  /* =========================================================
+     FOOTER ACCESSIBILITY
+  ========================================================= */
+
+  footer h3 {
+    font-size:1.2rem !important;
+    line-height:1.3;
+  }
+
+  footer p,
+  footer a {
+    font-size:1rem !important;
     line-height:1.7;
+  }
+
+  .copyright {
+    font-size:.95rem !important;
+    line-height:1.6;
+  }
+
+  /* =========================================================
+     FOCUS VISIBILITY
+     Helps keyboard and low-vision users see where they are
+  ========================================================= */
+
+  a:focus-visible,
+  button:focus-visible {
+    outline:3px solid #f1c75b;
+    outline-offset:4px;
   }
 
   /* =========================================================
@@ -395,13 +490,17 @@
     .visit-details {
       padding-top:2rem;
       padding-left:0;
-      border-top:1px solid #d8c79e;
+      border-top:1px solid #cfc5ad;
       border-left:0;
     }
 
   }
 
   @media(max-width:700px) {
+
+    /*
+      On smaller screens, display the whole panoramic image.
+    */
 
     .home-banner {
       height:auto;
@@ -415,7 +514,7 @@
     }
 
     .prayer-section {
-      padding:3rem 0 3.25rem;
+      padding:3.25rem 0 3.5rem;
     }
 
     .foundation-section {
@@ -433,7 +532,7 @@
 
     .foundation-date {
       padding-bottom:1.5rem;
-      border-bottom:1px solid #e3dac5;
+      border-bottom:1px solid #d9cfb9;
     }
 
     .foundation-year {
@@ -450,26 +549,43 @@
 
   @media(max-width:560px) {
 
+    /*
+      Maintain larger type even on phones.
+      Do not shrink ordinary reading text below roughly 18–20px.
+    */
+
+    html {
+      font-size:17px;
+    }
+
     .brand strong {
-      font-size:1rem;
+      font-size:1.08rem;
       color:#ffffff !important;
     }
 
     .brand span {
-      font-size:.62rem;
-      letter-spacing:.08em;
+      font-size:.88rem;
+      letter-spacing:.06em;
     }
 
-    .prayer-title {
-      font-size:2.25rem;
-    }
-
+    .prayer-title,
     .foundation-heading h2 {
-      font-size:2.5rem;
+      font-size:clamp(2.35rem,10vw,3rem);
     }
 
     .foundation-doctrine {
-      padding:1.6rem 1.4rem;
+      padding:1.7rem 1.45rem;
+    }
+
+    .foundation-story-copy p,
+    .foundation-closing p,
+    .visit-details p {
+      font-size:1.12rem;
+    }
+
+    footer p,
+    footer a {
+      font-size:1rem !important;
     }
 
   }
@@ -687,7 +803,7 @@ other doctrine shall we know, so says the Holy Spirit.
 
 </div>
 
-<!-- CLOSING -->
+<!-- FOUNDATION CLOSING -->
 
 <div class="foundation-closing">
 
@@ -721,7 +837,6 @@ May God richly bless you.
 
 <!-- =========================================================
      COME WORSHIP WITH US
-     KEPT UNCHANGED
 ========================================================= -->
 
 <section class="section visit-section">
