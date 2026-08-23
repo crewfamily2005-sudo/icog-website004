@@ -33,58 +33,59 @@
 
   .brand strong {
     display:block;
-    color:#0f2045;
+    color:#ffffff !important;
     font-size:1.12rem;
   }
 
   .brand span {
     display:block;
     margin-top:.15rem;
-    color:#8b6a26;
+    color:#e2c675 !important;
     font-size:.7rem;
     font-weight:bold;
     letter-spacing:.12em;
   }
 
   /* =========================================================
-     HOME HERO
-     Clean church photograph only
+     HOME BANNER
+     Uses the dedicated wide banner image
   ========================================================= */
 
-  .hero.home-hero {
-    position:relative;
+  .home-banner {
     width:100%;
     height:430px;
-    min-height:430px;
     margin:0;
-    padding:0 !important;
+    padding:0;
     overflow:hidden;
+    background:#ffffff;
+  }
 
-    background-size:cover !important;
+  .home-banner-image {
+    display:block;
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
 
     /*
-      Keeps the photograph positioned higher so the
-      church sign remains visible.
+      Fills the full browser width while preserving
+      the proportions of the photograph.
     */
-    background-position:center 52% !important;
+    object-fit:cover;
 
-    background-repeat:no-repeat !important;
-  }
+    /*
+      Slightly favors the lower part of the photograph
+      so the church building, church sign, and grounds
+      remain visible.
+    */
+    object-position:center 58%;
 
-  /*
-    Remove any overlay, gradient, shadow, or fade that
-    may be inherited from the main stylesheet.
-  */
-
-  .hero.home-hero::before,
-  .hero.home-hero::after {
-    display:none !important;
-    content:none !important;
-    background:none !important;
-  }
-
-  .home-hero .hero-inner {
-    display:none !important;
+    /*
+      Absolutely no visual overlay or image effects.
+    */
+    filter:none;
+    opacity:1;
+    box-shadow:none;
   }
 
   /* =========================================================
@@ -374,17 +375,23 @@
      RESPONSIVE
   ========================================================= */
 
-  @media(max-width:1000px) {
+  @media(max-width:1100px) {
 
-    .hero.home-hero {
-      height:410px;
-      min-height:410px;
-      background-position:center 50% !important;
+    .home-banner {
+      height:390px;
+    }
+
+    .home-banner-image {
+      object-position:center 56%;
     }
 
   }
 
   @media(max-width:900px) {
+
+    .home-banner {
+      height:340px;
+    }
 
     .visit-layout {
       grid-template-columns:1fr;
@@ -399,12 +406,25 @@
 
   }
 
+  /*
+    On smaller screens we stop forcing a fixed-height crop.
+
+    Because the new image is already panoramic, allowing
+    height:auto here ensures the entire church and sign
+    can remain visible on tablets and phones.
+  */
+
   @media(max-width:700px) {
 
-    .hero.home-hero {
-      height:400px;
-      min-height:400px;
-      background-position:38% 48% !important;
+    .home-banner {
+      height:auto;
+    }
+
+    .home-banner-image {
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      object-position:center center;
     }
 
     .scripture-section {
@@ -417,17 +437,12 @@
 
     .brand strong {
       font-size:1rem;
+      color:#ffffff !important;
     }
 
     .brand span {
       font-size:.62rem;
       letter-spacing:.08em;
-    }
-
-    .hero.home-hero {
-      height:390px;
-      min-height:390px;
-      background-position:32% 45% !important;
     }
 
     .scripture-section {
@@ -538,15 +553,19 @@ Visit Us
 <main id="main">
 
 <!-- =========================================================
-     CHURCH PHOTO
+     CHURCH BANNER
 ========================================================= -->
 
 <section
-  class="hero home-hero"
+  class="home-banner"
   aria-label="Israel Church of God"
 >
 
-<div class="hero-inner"></div>
+<img
+  class="home-banner-image"
+  src="assets/images/church-banner-wide.png"
+  alt="Israel Church of God, church sign, and grounds in San Bernardino"
+>
 
 </section>
 
