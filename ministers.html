@@ -9,7 +9,7 @@
 
 <meta
   name="description"
-  content="Meet the ministers, deacons, and mothers serving Israel Church of God, Seventh Day Holiness."
+  content="Meet the ministers and deacons serving Israel Church of God, Seventh Day Holiness."
 >
 
 <link rel="stylesheet" href="assets/styles.css">
@@ -131,61 +131,90 @@
   }
 
   /* =========================================================
-     LEADERSHIP AREA
+     MINISTERS SECTION
   ========================================================= */
 
-  .leadership-area {
+  .ministers-area {
     background:#fffdf8;
   }
 
-  .leadership-group {
-    max-width:1000px;
-    margin:0 auto 5rem;
-  }
-
-  .leadership-group:last-child {
-    margin-bottom:0;
-  }
-
-  /* =========================================================
-     SECTION HEADINGS
-  ========================================================= */
-
-  .leadership-heading {
-    position:relative;
-    margin-bottom:2rem;
+  .ministers-intro {
+    max-width:850px;
+    margin:0 auto 3.75rem;
     text-align:center;
   }
 
-  .leadership-heading::before {
+  .ministers-intro::before {
     content:"";
     display:block;
-    width:50px;
+    width:54px;
     height:3px;
-    margin:0 auto 1rem;
+    margin:0 auto 1.1rem;
     background:#c59a3b;
   }
 
-  .leadership-heading h2 {
+  .ministers-intro h2 {
     margin:0;
     color:#0f2045;
-    font-size:clamp(2.25rem,4vw,3rem);
-    line-height:1.12;
+    font-size:clamp(2.6rem,5vw,3.7rem);
+    line-height:1.08;
   }
 
-  .leadership-heading p {
-    margin:.65rem auto 0;
-    color:#85631e;
-    font-size:.9rem;
-    font-weight:800;
-    letter-spacing:.13em;
-    line-height:1.5;
-    text-transform:uppercase;
+  .ministers-intro p {
+    max-width:720px;
+    margin:1rem auto 0;
+    color:#4a515c;
+    font-size:1.12rem;
+    line-height:1.75;
   }
 
   /* =========================================================
-     SHARED LEADERSHIP CARDS
-     Same visual treatment for everyone
+     MINISTER SUBGROUPS
+  ========================================================= */
+
+  .minister-group {
+    max-width:1000px;
+    margin:0 auto;
+  }
+
+  .minister-group + .minister-group {
+    margin-top:4.5rem;
+    padding-top:4.5rem;
+    border-top:1px solid #d8c79e;
+  }
+
+  .group-heading {
+    margin-bottom:2rem;
+  }
+
+  .group-heading h3 {
+    margin:0;
+    color:#0f2045;
+    font-size:clamp(1.9rem,3.5vw,2.5rem);
+    line-height:1.15;
+  }
+
+  .group-heading .group-kicker {
+    display:block;
+    margin-bottom:.45rem;
+    color:#85631e;
+    font-size:.9rem;
+    font-weight:800;
+    letter-spacing:.14em;
+    line-height:1.4;
+    text-transform:uppercase;
+  }
+
+  .group-heading p {
+    margin:.65rem 0 0;
+    color:#555d67;
+    font-size:1.05rem;
+    line-height:1.7;
+  }
+
+  /* =========================================================
+     SHARED LEADER CARDS
+     SAME TREATMENT FOR EVERY MINISTER
   ========================================================= */
 
   .leader-grid {
@@ -197,7 +226,7 @@
   .leader-card {
     position:relative;
     display:flex;
-    min-height:155px;
+    min-height:160px;
     flex-direction:column;
     justify-content:center;
     padding:2rem 2.1rem;
@@ -207,11 +236,6 @@
     border-top:5px solid #c59a3b;
     box-shadow:0 10px 25px rgba(15,32,69,.07);
   }
-
-  /*
-    Subtle decorative corner treatment.
-    Same on every card so no office receives more visual weight.
-  */
 
   .leader-card::after {
     content:"";
@@ -224,7 +248,7 @@
     border-radius:50%;
   }
 
-  .leader-card h3 {
+  .leader-card h4 {
     position:relative;
     z-index:1;
     margin:0;
@@ -233,11 +257,6 @@
     font-size:1.65rem;
     line-height:1.3;
   }
-
-  /*
-    Used only where a specific office needs to be identified.
-    It is intentionally understated.
-  */
 
   .office {
     position:relative;
@@ -253,20 +272,60 @@
   }
 
   /* =========================================================
-     SECTION DIVIDERS
+     DEACONS
   ========================================================= */
 
-  .group-divider {
-    width:100%;
-    height:1px;
-    margin:0 0 5rem;
-    background:linear-gradient(
-      to right,
-      transparent,
-      #d8c79e 15%,
-      #d8c79e 85%,
-      transparent
-    );
+  .deacons-area {
+    background:#f7f3e8;
+    border-top:1px solid #d8c79e;
+  }
+
+  .deacons-inner {
+    max-width:1000px;
+    margin:0 auto;
+  }
+
+  .deacons-heading {
+    max-width:760px;
+    margin:0 auto 2.5rem;
+    text-align:center;
+  }
+
+  .deacons-heading::before {
+    content:"";
+    display:block;
+    width:50px;
+    height:3px;
+    margin:0 auto 1rem;
+    background:#c59a3b;
+  }
+
+  .deacons-heading h2 {
+    margin:0;
+    color:#0f2045;
+    font-size:clamp(2.35rem,4vw,3.2rem);
+    line-height:1.1;
+  }
+
+  .deacons-heading p {
+    margin:.7rem auto 0;
+    color:#85631e;
+    font-size:.9rem;
+    font-weight:800;
+    letter-spacing:.13em;
+    line-height:1.5;
+    text-transform:uppercase;
+  }
+
+  /*
+    Same card treatment as the ministers.
+    The section heading—not the card design—identifies the office.
+  */
+
+  .deacon-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:1.4rem;
   }
 
   /* =========================================================
@@ -344,16 +403,14 @@
 
   @media(max-width:720px) {
 
-    .leader-grid {
+    .leader-grid,
+    .deacon-grid {
       grid-template-columns:1fr;
     }
 
-    .leadership-group {
-      margin-bottom:4rem;
-    }
-
-    .group-divider {
-      margin-bottom:4rem;
+    .minister-group + .minister-group {
+      margin-top:3.75rem;
+      padding-top:3.75rem;
     }
 
   }
@@ -379,11 +436,11 @@
     }
 
     .leader-card {
-      min-height:140px;
+      min-height:145px;
       padding:1.75rem 1.5rem;
     }
 
-    .leader-card h3 {
+    .leader-card h4 {
       font-size:1.55rem;
     }
 
@@ -510,28 +567,35 @@ Ephesians 4:11
 </section>
 
 <!-- =========================================================
-     LEADERSHIP
-========================================================= -->
-
-<section class="section leadership-area">
-
-<div class="container">
-
-<!-- =========================================================
      MINISTERS
 ========================================================= -->
 
-<section class="leadership-group">
+<section class="section ministers-area">
 
-<div class="leadership-heading">
+<div class="container">
+
+<div class="ministers-intro">
 
 <h2>
 Ministers
 </h2>
 
 <p>
-Pastoral and Spiritual Leadership
+Serving the Church through spiritual leadership, prayer,
+wisdom, counsel, and example.
 </p>
+
+</div>
+
+<!-- PASTORAL AND SPIRITUAL LEADERSHIP -->
+
+<section class="minister-group">
+
+<div class="group-heading">
+
+<h3>
+Pastoral and Spiritual Leadership
+</h3>
 
 </div>
 
@@ -539,9 +603,9 @@ Pastoral and Spiritual Leadership
 
 <article class="leader-card">
 
-<h3>
+<h4>
 Bro. Kenneth Olive
-</h3>
+</h4>
 
 <span class="office">
 Pastor
@@ -551,9 +615,9 @@ Pastor
 
 <article class="leader-card">
 
-<h3>
+<h4>
 Bro. Christopher Crew
-</h3>
+</h4>
 
 <span class="office">
 Prophet
@@ -565,18 +629,75 @@ Prophet
 
 </section>
 
-<div
-  class="group-divider"
-  aria-hidden="true"
-></div>
+<!-- MOTHERS -->
+
+<section class="minister-group">
+
+<div class="group-heading">
+
+<span class="group-kicker">
+Mothers
+</span>
+
+<h3>
+Prayer, Wisdom, Counsel, and Example
+</h3>
+
+</div>
+
+<div class="leader-grid">
+
+<article class="leader-card">
+
+<h4>
+Sis. Ether Allen
+</h4>
+
+</article>
+
+<article class="leader-card">
+
+<h4>
+Sis. Nereira Crew
+</h4>
+
+</article>
+
+<article class="leader-card">
+
+<h4>
+Sis. Kimley Jones
+</h4>
+
+</article>
+
+<article class="leader-card">
+
+<h4>
+Sis. Ada Olive
+</h4>
+
+</article>
+
+</div>
+
+</section>
+
+</div>
+
+</section>
 
 <!-- =========================================================
      DEACONS
 ========================================================= -->
 
-<section class="leadership-group">
+<section class="section deacons-area">
 
-<div class="leadership-heading">
+<div class="container">
+
+<div class="deacons-inner">
+
+<div class="deacons-heading">
 
 <h2>
 Deacons
@@ -588,88 +709,27 @@ Service and Congregational Support
 
 </div>
 
-<div class="leader-grid">
+<div class="deacon-grid">
 
 <article class="leader-card">
 
-<h3>
+<h4>
 Bro. John Allen
-</h3>
+</h4>
 
 </article>
 
 <article class="leader-card">
 
-<h3>
+<h4>
 Bro. Howard McIntyre
-</h3>
+</h4>
 
 </article>
 
 </div>
 
-</section>
-
-<div
-  class="group-divider"
-  aria-hidden="true"
-></div>
-
-<!-- =========================================================
-     MOTHERS
-========================================================= -->
-
-<section class="leadership-group">
-
-<div class="leadership-heading">
-
-<h2>
-Mothers
-</h2>
-
-<p>
-Prayer, Wisdom, Counsel, and Example
-</p>
-
 </div>
-
-<div class="leader-grid">
-
-<article class="leader-card">
-
-<h3>
-Sis. Ether Allen
-</h3>
-
-</article>
-
-<article class="leader-card">
-
-<h3>
-Sis. Nereira Crew
-</h3>
-
-</article>
-
-<article class="leader-card">
-
-<h3>
-Sis. Kimley Jones
-</h3>
-
-</article>
-
-<article class="leader-card">
-
-<h3>
-Sis. Ada Olive
-</h3>
-
-</article>
-
-</div>
-
-</section>
 
 </div>
 
@@ -716,6 +776,8 @@ San Bernardino, CA 92411
 
 <div class="footer-contact-list">
 
+<!-- PHONE -->
+
 <div class="footer-contact-item">
 
 <span
@@ -742,6 +804,8 @@ Phone:
 </div>
 
 </div>
+
+<!-- EMAIL -->
 
 <div class="footer-contact-item">
 
@@ -770,6 +834,8 @@ icog7@outlook.com
 </div>
 
 </div>
+
+<!-- WEBSITE -->
 
 <div class="footer-contact-item">
 
